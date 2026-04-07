@@ -1,0 +1,440 @@
+/* Home — Services & Packages cards: discount badge on hero image (filled by custom.js) */
+.home-vehicle-feature-card > a:first-of-type {
+	position: relative;
+}
+
+.home-vehicle-discount-badge {
+	position: absolute;
+	top: 20px;
+	inset-inline-end: 20px;
+	z-index: 2;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 0.8125rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	background: #ff5100;
+	color: #fff;
+	border-radius: 30px;
+	padding: 2px 10px;
+	pointer-events: none;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.home-vehicle-discount-badge[hidden] {
+	display: none !important;
+}
+
+@media (min-width: 768px) {
+	.home-vehicle-discount-badge {
+		font-size: 0.875rem;
+		padding: 3px 12px;
+	}
+}
+
+/* Home — first vehicle/service card: full-card glass "See Details" overlay */
+
+.home-vehicle-feature-card-primary {
+	position: relative;
+	overflow: hidden;
+}
+
+.home-vehicle-feature-card {
+	position: relative;
+	overflow: hidden;
+}
+
+.home-vehicle-feature-card__overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 20px 22px;
+	border-radius: 15px;
+	background: rgba(12, 14, 16, 0.52);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+@media (min-width: 768px) {
+	.home-vehicle-feature-card__overlay {
+		padding: 24px 25px 26px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.home-vehicle-feature-card__overlay {
+		padding: 28px 30px 30px;
+	}
+}
+
+.home-vehicle-feature-card-primary.is-details-open .home-vehicle-feature-card__overlay,
+.home-vehicle-feature-card.is-details-open .home-vehicle-feature-card__overlay {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.home-vehicle-feature-card__overlay-close {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	z-index: 22;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 9999px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	background: rgba(255, 255, 255, 0.03);
+	color: #fff;
+	cursor: pointer;
+	transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+html[dir="rtl"] .home-vehicle-feature-card__overlay-close {
+	left: auto;
+	right: 16px;
+}
+
+.home-vehicle-feature-card__overlay-close:hover {
+	background: rgba(255, 255, 255, 0.07);
+	border-color: rgba(255, 255, 255, 0.28);
+}
+
+.home-vehicle-feature-card__overlay-title {
+	margin: 0;
+	padding: 44px 12px 0;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.45rem;
+	line-height: 1.25;
+	color: #fff;
+}
+
+@media (min-width: 768px) {
+	.home-vehicle-feature-card__overlay-title {
+		font-size: 1.65rem;
+		padding-top: 48px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.home-vehicle-feature-card__overlay-title {
+		font-size: 1.9rem;
+	}
+}
+
+.home-vehicle-feature-card__overlay-body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	min-height: 0;
+	width: 100%;
+	padding: 10px 4px 22px;
+	overflow: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior: contain;
+	scroll-padding-top: 10px;
+	scroll-padding-bottom: 16px;
+}
+
+.home-vehicle-feature-card__overlay-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.home-vehicle-feature-card__overlay-list {
+		gap: 16px;
+	}
+}
+
+.home-vehicle-feature-card__overlay-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	font-size: 0.9375rem;
+	line-height: 1.35;
+	font-weight: 500;
+	color: #fff;
+	text-align: left;
+}
+
+html[dir="rtl"] .home-vehicle-feature-card__overlay-item {
+	text-align: right;
+	flex-direction: row-reverse;
+}
+
+@media (min-width: 768px) {
+	.home-vehicle-feature-card__overlay-item {
+		font-size: 1rem;
+	}
+}
+
+.home-vehicle-feature-card__overlay-check {
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	margin-top: 2px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px;
+	border: 1.5px solid rgba(255, 255, 255, 0.85);
+	background: rgba(255, 255, 255, 0.06);
+	font-size: 14px;
+	line-height: 1;
+	color: #fff;
+}
+
+/* Section sub-headings (e.g. dash cam Front / Rear / Additional) */
+.home-vehicle-feature-card__overlay-item--subheading {
+	margin-top: 4px;
+	padding-top: 14px;
+	border-top: 1px solid rgba(255, 255, 255, 0.14);
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.3;
+	gap: 10px;
+	align-items: center;
+}
+
+.home-vehicle-feature-card__overlay-item--subheading:first-child {
+	margin-top: 0;
+	padding-top: 2px;
+	border-top: 0;
+}
+
+.home-vehicle-feature-card__overlay-subheading-icon {
+	flex-shrink: 0;
+	width: 22px;
+	height: 22px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	background: rgba(255, 81, 0, 0.22);
+	border: 1px solid rgba(255, 81, 0, 0.45);
+	color: #ff9a5c;
+	font-size: 13px;
+	line-height: 1;
+}
+
+.home-vehicle-feature-card__overlay-subheading-label {
+	color: #fff;
+	letter-spacing: 0.02em;
+}
+
+.home-vehicle-feature-card__overlay-item--detail {
+	padding-inline-start: 10px;
+	border-inline-start: 2px solid rgba(255, 255, 255, 0.1);
+	margin-inline-start: 2px;
+}
+
+.home-vehicle-feature-card__overlay-footer {
+	flex-shrink: 0;
+	margin: 0;
+	padding: 18px 12px 0;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.3;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+@media (min-width: 768px) {
+	.home-vehicle-feature-card__overlay-footer {
+		font-size: 1.0625rem;
+		padding-top: 22px;
+	}
+}
+
+.home-vehicle-feature-card__overlay-footer-icon {
+	font-size: 1.1rem;
+	color: #fff;
+}
+
+.home-vehicle-feature-card__overlay-footer-secondary {
+	font-size: 0.95rem;
+	padding-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+@media (min-width: 768px) {
+	.home-vehicle-feature-card__overlay-footer-secondary {
+		font-size: 1rem;
+		padding-top: 12px;
+	}
+}
+
+.home-vehicle-feature-card__overlay-bottom-close {
+	flex-shrink: 0;
+	margin: 14px auto 0;
+	padding: 8px 16px;
+	border-radius: 14px;
+	border: 1px solid rgba(255, 81, 0, 0.6);
+	background: #ff5100;
+	color: #0b0b0b;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 0.95rem;
+	line-height: 1.2;
+	transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.home-vehicle-feature-card__overlay-bottom-close:hover {
+	background: #e64500;
+	border-color: rgba(255, 81, 0, 0.85);
+}
+
+/* Additional Services swiper — fixed 4:3 hero (car + two-wheeler blocks share markup) */
+#home-vehicles-locations-grid .home-additional-card__media,
+#home-vehicles-locations-grid-two-wheeler .home-additional-card__media {
+	display: block;
+	position: relative;
+	width: 100%;
+	flex-shrink: 0;
+	overflow: hidden;
+	border-radius: 15px;
+	aspect-ratio: 4 / 3;
+}
+
+#home-vehicles-locations-grid .home-additional-card__media img,
+#home-vehicles-locations-grid-two-wheeler .home-additional-card__media img {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100% !important;
+	max-width: none;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+/* Additional Services: % OFF badge on image (values in HTML match title-row SAR prices) */
+#home-vehicles-locations-grid .home-additional-card__media .home-additional-card__discount-badge,
+#home-vehicles-locations-grid-two-wheeler .home-additional-card__media .home-additional-card__discount-badge {
+	top: 12px;
+	inset-inline-end: 12px;
+	z-index: 2;
+}
+
+@media (min-width: 768px) {
+	#home-vehicles-locations-grid .home-additional-card__media .home-additional-card__discount-badge,
+	#home-vehicles-locations-grid-two-wheeler .home-additional-card__media .home-additional-card__discount-badge {
+		top: 16px;
+		inset-inline-end: 16px;
+	}
+}
+
+/* Two-Wheeler + Services & Packages: uniform card height, fixed hero ratio (matches car S&P reference) */
+#home-vehicles-grid-two-wheeler {
+	align-items: stretch;
+}
+
+#home-vehicles-grid-two-wheeler .home-vehicle-feature-card--two-wheeler {
+	min-height: 100%;
+}
+
+#home-vehicles-grid-two-wheeler .home-tw-card__media {
+	display: block;
+	position: relative;
+	width: 100%;
+	flex-shrink: 0;
+	overflow: hidden;
+	border-radius: 15px;
+	aspect-ratio: 16 / 9;
+}
+
+#home-vehicles-grid-two-wheeler .home-tw-card__img {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100% !important;
+	max-width: none;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+#home-vehicles-grid-two-wheeler .home-tw-card__body {
+	flex: 1 1 auto;
+	min-height: 0;
+}
+
+#home-vehicles-grid-two-wheeler .home-tw-card__features {
+	flex: 0 0 auto;
+}
+
+#home-vehicles-grid-two-wheeler .home-tw-card__actions {
+	flex-shrink: 0;
+}
+
+#home-vehicles-grid-two-wheeler .home-tw-card__media .home-vehicle-discount-badge {
+	top: 12px;
+	inset-inline-end: 12px;
+}
+
+@media (min-width: 768px) {
+	#home-vehicles-grid-two-wheeler .home-tw-card__media .home-vehicle-discount-badge {
+		top: 16px;
+		inset-inline-end: 16px;
+	}
+}
+
+/*
+ * Testimonials: gap below Video / promo block.
+ * Root cause: bundled assets/css/style.css does not include many arbitrary Tailwind
+ * utilities (e.g. pt-[50px]), so spacing classes on the section had no effect in the browser.
+ */
+#home-section-testimonials {
+	overflow: hidden;
+	margin-top: clamp(2.5rem, 5vw, 5rem);
+	padding-bottom: clamp(3.75rem, 8vw, 7.5rem);
+}
+
+/* Special Deals & Promotions: equal height when two slides per view */
+.vehiclesSwiper .swiper-wrapper {
+	align-items: stretch;
+}
+.vehiclesSwiper .swiper-slide {
+	height: auto;
+	display: flex;
+	box-sizing: border-box;
+}
+.vehiclesSwiper .swiper-slide > .special-deals-promo-card {
+	flex: 1 1 auto;
+	width: 100%;
+	min-height: 0;
+}
+
+@media (min-width: 768px) {
+	.special-deals-promo-card {
+		grid-template-rows: minmax(250px, 1fr);
+	}
+}

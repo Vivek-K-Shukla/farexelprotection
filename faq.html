@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links Of CSS File -->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/flaticon_rentq.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/scrollCue.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon -->
+		<link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+        <!-- Title -->
+        <title>RentQ - Tailwind Car Rental HTML Template</title>
+
+        <!-- Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="min-h-screen flex flex-col">
+
+        <!-- Preloader -->
+        <div
+            id="preloader"
+            class="fixed inset-0 z-[999] bg-white dark:bg-dark text-center flex items-center justify-center gap-[18px]"
+        >
+            <div class="wheel-loader w-[40px] h-[40px] rounded-full border-[5px] border-black/10 dark:border-white/10 !border-t-primary animate-spin"></div>
+            <span class="inline-flex h-[40px] max-h-[40px] items-center shrink-0">
+                <img src="assets/images/logo_six.png" class="dark:!hidden h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+                <img src="assets/images/logo_six.png" class="!hidden dark:!inline h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+            </span>
+        </div>
+        <!-- End Preloader -->
+        
+        <!-- Top Header -->
+        <div class="bg-primary text-white py-[13px]">
+            <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-[8px] md:gap-[10px] lg:gap-[25px]">
+                    <div class="flex flex-wrap justify-center lg:justify-start items-center gap-[8px] md:gap-[15px] xl:gap-[25px] font-medium">
+                        <a href="/cdn-cgi/l/email-protection#3a525f5656554d7a485f544e4b14595557" class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px] hover:text-white/80">
+                            <i class="ri-mail-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            <span class="__cf_email__" data-cfemail="83ebe6efefecf4c3f1e6edf7f2ade0ecee">contact@farexel.com</span>
+                        </a>
+                        <span class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-time-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            Mon - Fri: 9:00 AM - 8:00 PM
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap justify-center lg:justify-end items-center gap-[8px] md:gap-[15px] xl:gap-[25px] font-medium">
+                        <a
+                            href="tel:+1855-5079484"
+                            class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px] hover:text-white/80"
+                        >
+                            <i class="ri-phone-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            +1 855-507-9484
+                        </a>
+                        <div class="relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-global-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            Lang:
+                            <select class="appearance-none cursor-pointer outline-0" name="lang" id="lang">
+                                <option selected value="en">
+                                    EN
+                                </option>
+                                <option value="fr">
+                                    FR
+                                </option>
+                                <option value="es">
+                                    ES
+                                </option>
+                                <option value="de">
+                                    DE
+                                </option>
+                                <option value="pt">
+                                    PT
+                                </option>
+                            </select>
+                        </div>
+                        <div class="flex items-center gap-[7px] md:gap-[10px] relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-user-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            <a
+                                href="login.html"
+                                class="hover:text-white/80"
+                            >
+                                Login
+                            </a>
+                            <div class="w-px h-[12px] md:h-[15px] bg-white/30"></div>
+                            <a
+                                href="register.html"
+                                class="hover:text-white/80"
+                            >
+                                Register
+                            </a>
+                        </div>
+                        <button
+                            type="button"
+                            id="lightDarkToggle"
+                            class="inline-block leading-none"
+                        >
+                            <i class="ri-sun-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Top Header -->
+
+        <!-- Header -->
+        <header
+            class="relative z-[9] py-[15px] border-b lg:border-b-0 border-black/10 dark:border-white/10"
+            id="navbar"
+        >
+            <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                <div class="relative flex items-center flex-wrap lg:flex-nowrap justify-between lg:justify-start">
+                    <a
+                        href="index.html"
+                        class="flex-none inline-flex items-center shrink-0 self-center h-[40px] max-h-[40px] min-w-0"
+                    >
+                        <img src="assets/images/logo_six.png" class="dark:!hidden h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+                        <img src="assets/images/logo_six.png" class="!hidden dark:!inline h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="white-logo">
+                    </a>
+                    <div class="flex-none lg:hidden">
+                        <button
+                            type="button"
+                            class="navbar-burger-toggle inline-block leading-none"
+                        >
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                        </button>
+                    </div>
+                    <div class="hidden lg:flex items-center grow basis-full basis-auto gap-[25px] xl:gap-[40px]">
+                        <ul class="navbar-nav flex items-center flex-row gap-[25px] xl:gap-[30px] ltr:ml-auto rtl:mr-auto">
+                            <li class="nav-item relative">
+                                <a
+                                    href="index.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="vehicles.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Services
+                                </a>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="about.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="drivers.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Team
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="testimonials.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Testimonials
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="faq.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            FAQs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Portfolio
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="shop.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Photos
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="shop.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Videos
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Grid
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-details.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="contact.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex items-center gap-[10px]">
+                            <div class="relative">
+                                <button
+                                    type="button"
+                                    id="searchBtn"
+                                    class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-2xl relative text-black dark:text-white hover:text-primary"
+                                >
+                                    <i class="ri-search-line"></i>
+                                </button>
+                                <div
+                                    id="searchBox"
+                                    class="absolute mt-[10px] top-full ltr:right-0 rtl:left-0 w-[380px] xl:w-[420px] bg-white dark:bg-black p-[20px] md:p-[25px] lg:p-[30px] invisible opacity-0 transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none"
+                                >
+                                    <form
+                                        action="#"
+                                        class="relative"
+                                    >
+                                        <input type="text" class="form-input dark:!bg-dark" placeholder="Search for anything" name="search" id="searchInput">
+                                        <button
+                                            class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-2xl leading-none text-black dark:text-white hover:text-primary"
+                                            type="submit"
+                                        >
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <a
+                                href="cart.html"
+                                class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-2xl relative text-black dark:text-white hover:text-primary"
+                            >
+                                <i class="ri-shopping-cart-line"></i>
+                                <span class="flex items-center justify-center rounded-full bg-primary text-white w-[18px] h-[18px] text-xs font-medium absolute top-0 ltr:right-0 rtl:left-0">
+                                    0
+                                </span>
+                            </a>
+                            <button
+                                type="button"
+                                class="navbar-burger-toggle ltr:ml-[10px] rtl:mr-[10px] ltr:xl:ml-[20px] rtl:xl:mr-[20px] inline-block leading-none text-2xl transition-all duration-300 ease-in-out text-black dark:text-white hover:text-primary"
+                            >
+                                <i class="ri-menu-3-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header -->
+        
+        <!-- Sidebar Modal -->
+        <div class="sidebar-modal">
+            <div class="sidebar-modal-header">
+                <a
+                    href="index.html"
+                    class="flex-none inline-block"
+                >
+                    <img src="assets/images/logo.svg" class="dark:!hidden" alt="logo">
+                    <img src="assets/images/white-logo.svg" class="!hidden dark:!inline" alt="white-logo">
+                </a>
+                <button
+                    type="button"
+                    class="inline-block text-2xl leading-none text-black dark:text-white hover:text-primary"
+                >
+                    <i class="flaticon-close"></i>
+                </button>
+            </div>
+            <div class="sidebar-modal-body scrollbar">
+                <p class="font-bold text-black dark:text-white text-xl md:text-2xl lg:text-3xl !leading-[1.2]">
+                    Premium car rentals with transparent pricing and exceptional service.
+                </p>
+                <ul class="sidebar-navbar-nav mt-[20px] md:mt-[30px] lg:mt-[40px] lg:hidden">
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="index.html"
+                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="vehicles.html"
+                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle active relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="about.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="drivers.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Team
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="testimonials.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="faq.html"
+                                    class="nav-link active relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="shop.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Photos
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="shop.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Videos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-grid.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Grid
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-details.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Details
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="contact.html"
+                            class="nav-link relative font-medium block text-black dark:text-white hover:text-primary"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px] mt-[20px] md:mt-[30px] lg:mt-[40px]">
+                    Contact
+                </h3>
+                <ul class="text-base mb-[20px] md:mb-[30px] lg:mb-[40px]">
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Call:
+                        <a
+                            href="tel:+18558079484"
+                            class="font-bold md:text-lg lg:text-xl hover:text-primary"
+                        >
+                            +1 855 - 807 9484
+                        </a>
+                    </li>
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Email:
+                        <a href="/cdn-cgi/l/email-protection#0f676a6363604f7d6a617b7e216c6062" class="font-bold md:text-lg lg:text-xl text-primary hover:underline">
+                            <span class="__cf_email__" data-cfemail="8ce4e9e0e0e3ccfee9e2f8fda2efe3e1">[email&#160;protected]</span>
+                        </a>
+                    </li>
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Address:
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="font-semibold hover:text-primary"
+                        >
+                            123 Business Ave, Los Angeles, CA 90045
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px]">
+                    Social
+                </h3>
+                <ul>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-facebook-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-twitter-x-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Twitter/X
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-linkedin-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-instagram-line w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-modal-footer">
+                <a
+                    href="cart.html"
+                    class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-xl relative text-black dark:text-white hover:text-primary"
+                >
+                    <i class="ri-shopping-cart-line"></i>
+                    <span class="flex items-center justify-center rounded-full bg-primary text-white w-[18px] h-[18px] text-xs font-medium absolute top-0 ltr:right-0 rtl:left-0">
+                        0
+                    </span>
+                </a>
+                <form
+                    action="#"
+                    class="relative flex-1"
+                >
+                    <input type="text" class="form-input dark:!bg-dark" placeholder="Search for anything">
+                    <button
+                        class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-xl leading-none text-black dark:text-white hover:text-primary"
+                        type="submit"
+                    >
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="backdrop"></div>
+        <!-- End Sidebar Modal -->
+
+        <!-- Main -->
+        <main class="flex-1">
+            
+            <!-- Page Banner -->
+            <div
+                class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px] bg-cover bg-center bg-no-repeat relative z-[1] text-center ltr:lg:text-left rtl:lg:text-right"
+                style="background-image: url(assets/images/bg-images/bg-image9.jpg);"
+            >
+                <div class="container">
+                    <h2 class="mb-[8px] text-[34px] md:text-[44px] lg:text-[54px] xl:text-[64px] leading-[1.2] xl:max-w-[985px]">
+                        Frequently Asked Questions
+                    </h2>
+                    <ul class="flex flex-wrap items-center justify-center lg:justify-start gap-[10px] md:gap-[15px]">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="font-medium text-primary hover:underline"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <span class="block w-px h-[15px] bg-black dark:bg-white ltr:rotate-[15deg] rtl:rotate-[-15deg] mt-px"></span>
+                        </li>
+                        <li>
+                            FAQs
+                        </li>
+                    </ul>
+                    <div class="absolute bottom-0 ltr:right-0 rtl:left-0 bg-white dark:bg-dark ltr:rounded-tl-[15px] rtl:rounded-tr-[15px] py-[25px] px-[50px] hidden lg:block">
+                        <img
+                            src="assets/images/car.gif"
+                            class="ltr:-scale-x-100"
+                            data-cue="slideInUp"
+                            alt="car"
+                        >
+                    </div>
+                </div>
+                <div class="absolute inset-0 -z-[1] bg-dark/90 hidden dark:block"></div>
+            </div>
+            <!-- End Page Banner -->
+
+            <!-- FAQ -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
+                <div
+                    class="container"
+                    data-cues="slideInUp"
+                    data-group="faqContent"
+                >
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-[15px] md:gap-[20px] lg:gap-[25px] items-center mb-[30px] md:mb-[35px] lg:mb-[40px]">
+                        <div class="lg:col-span-2">
+                            <span class="block font-bold text-primary mb-[10px]">
+                                Frequently Asked Questions
+                            </span>
+                            <h2 class="mb-0 text-xl md:text-2xl lg:text-3xl leading-[1.2] xl:max-w-[650px]">
+                                Clear, concise answers designed to give you complete confidence before you proceed. Our team remains available 24/7 for any further assistance.
+                            </h2>
+                        </div>
+                        <div class="lg:col-span-1 ltr:lg:text-right rtl:lg:text-left">
+                            <span class="block font-bold">
+                                Still Have Questions? <a href="contact.html" class="text-primary hover:underline">Contact Us</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] lg:items-start">
+                        <div class="lg:col-span-1 lg:sticky lg:top-[150px]">
+                            <ul>
+                                <li class="mb-[15px] md:mb-[20px] last:mb-0">
+                                    <span class="block mb-[5px]">
+                                        Phone Support
+                                    </span>
+                                    <a
+                                        href="tel:+18558079484"
+                                        class="inline-block text-black dark:text-white leading-none font-bold text-base md:text-lg lg:text-xl hover:text-primary"
+                                    >
+                                        +1 855 - 807 9484
+                                    </a>
+                                </li>
+                                <li class="mb-[15px] md:mb-[20px] last:mb-0">
+                                    <span class="block mb-[5px]">
+                                        Email Support
+                                    </span>
+                                    <a href="/cdn-cgi/l/email-protection#45363035352a37310537202b31346b262a28" class="inline-block text-black dark:text-white leading-none font-bold text-base md:text-lg lg:text-xl hover:text-primary">
+                                        <span class="__cf_email__" data-cfemail="40333530302f32340032252e34316e232f2d">[email&#160;protected]</span>
+                                    </a>
+                                </li>
+                                <li class="mb-[15px] md:mb-[20px] last:mb-0">
+                                    <span class="block mb-[5px]">
+                                        Live Chat
+                                    </span>
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="inline-block text-black dark:text-white leading-none font-bold text-base md:text-lg lg:text-xl hover:text-primary"
+                                    >
+                                        Available 24/7
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lg:col-span-2 accordion">
+                            <div class="accordion-item active py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    1. How far in advance should I book your service?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px]">
+                                    <p>
+                                        We recommend booking at least 24–48 hours in advance to ensure availability and preferred scheduling. For premium packages or peak periods, earlier reservations allow us to deliver a more seamless and personalized experience.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    2. Are there any hidden charges or additional costs?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px] hidden">
+                                    <p>
+                                        No. Our approach is fully transparent — every service is clearly defined with no hidden charges. What is communicated upfront is exactly what you can expect.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    3. What happens after I request a service?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px] hidden">
+                                    <p>
+                                        Once you submit your requirement, our team connects with you directly to understand your needs in detail, confirm the scope, and ensure complete clarity before proceeding.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    4. What standards do you follow during service delivery?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px] hidden">
+                                    <p>
+                                        Every service follows a structured, detail-focused process using professional-grade techniques and products, ensuring consistency, precision, and a refined final outcome.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    5. Can I modify or reschedule my booking?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px] hidden">
+                                    <p>
+                                        Yes, flexibility is part of our service. You can request modifications or rescheduling, and our team will accommodate based on availability.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    6. How do I get started with booking a service?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px] hidden">
+                                    <p>
+                                        Simply select your vehicle type, size, and required service. From there, connect with us directly for confirmation and a complete overview before proceeding.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    7. Is there any minimum requirement to avail services?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px] hidden">
+                                    <p>
+                                        Our services are designed to cater to a wide range of needs. Specific requirements may vary depending on the service selected, which will be clarified during confirmation.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    8. What kind of protection or durability can I expect?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px] hidden">
+                                    <p>
+                                        We use advanced solutions designed to enhance and preserve your vehicle’s condition, delivering long-lasting protection along with a visibly refined finish.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[5px] md:py-[10px] lg:py-[15px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white py-[10px]"
+                                    type="button"
+                                >
+                                    9. How do you ensure customer satisfaction?
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pb-[10px] ltr:md:pr-[85px] rtl:md:pl-[85px] hidden">
+                                    <p>
+                                        From initial consultation to final delivery, every step is managed with precision, transparency, and attention to detail — ensuring an experience that consistently meets high expectations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End FAQ -->
+            
+        </main>
+        <!-- End Main -->
+
+        <!-- Footer -->
+        <footer class="bg-black text-white/70 pt-[60px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px]">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
+                    <div class="lg:col-span-1">
+                        <a
+                            href="index.html"
+                            class="inline-block mb-[18px] lg:mb-[26px]"
+                        >
+                            <img
+                                src="assets/images/logo_six.png"
+                                class="block h-auto max-h-[32px] w-auto max-w-[148px] sm:max-w-[160px] object-contain object-left"
+                                alt="ProMotors"
+                            >
+                        </a>
+                        <h3 class="mb-[15px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                            Download Our App
+                        </h3>
+                        <div class="flex flex-wrap items-center gap-[10px]">
+                            <a
+                                href="#"
+                                target="_blank"
+                                class="inline-block relative border border-white/30 bg-[#171E20] rounded-[5px] py-[10px] ltr:pr-[18px] rtl:pl-[18px] ltr:pl-[57px] rtl:pr-[57px] hover:border-primary"
+                            >
+                                <i class="ri-apple-fill text-white absolute top-1/2 -translate-y-1/2 ltr:left-[12px] rtl:right-[12px] text-4xl leading-none -mt-px"></i>
+                                <span class="block text-[#d9d9d9] text-13 md:text-sm leading-none mb-[3px]">
+                                    Download on the
+                                </span>
+                                <span class="block font-bold text-white leading-none">
+                                    App Store
+                                </span>
+                            </a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                class="inline-block relative border border-white/30 bg-[#171E20] rounded-[5px] py-[10px] ltr:pr-[18px] rtl:pl-[18px] ltr:pl-[57px] rtl:pr-[57px] hover:border-primary"
+                            >
+                                <i class="ri-google-play-fill text-white absolute top-1/2 -translate-y-1/2 ltr:left-[12px] rtl:right-[12px] text-4xl leading-none -mt-px"></i>
+                                <span class="block text-[#d9d9d9] text-13 md:text-sm leading-none mb-[3px]">
+                                    Get it on
+                                </span>
+                                <span class="block font-bold text-white leading-none">
+                                    Google Play
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-[25px] ltr:xl:pl-[100px] rtl:xl:pr-[100px]">
+                        <div>
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Company
+                            </h3>
+                            <ul>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="about.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        About us
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="pricing.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Pricing plan
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="locations.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Locations
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="blog-grid.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Our news
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="contact.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Contact us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Social
+                            </h3>
+                            <ul>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Twitter/X
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        LinkedIn
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        YouTube
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 ltr:lg:-ml-[15px] rtl:lg:-mr-[15px]">
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Contact
+                            </h3>
+                            <ul class="text-[#d9d9d9]">
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Call:
+                                    <a
+                                        href="tel:+18558079484"
+                                        class="font-bold md:text-lg lg:text-xl text-white hover:text-primary"
+                                    >
+                                        +1 855 - 807 9484
+                                    </a>
+                                </li>
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Email:
+                                    <a href="/cdn-cgi/l/email-protection#bbd3ded7d7d4fbc9ded5cfca95d8d4d6" class="font-bold md:text-lg lg:text-xl text-primary hover:underline">
+                                        <span class="__cf_email__" data-cfemail="d0b8b5bcbcbf90a2b5bea4a1feb3bfbd">contact@farexel.com</span>
+                                    </a>
+                                </li>
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Address:
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="font-semibold text-white hover:text-primary"
+                                    >
+                                       Riyadh, Saudi Arabia, CA 90045
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-[60px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px]"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-[15px] md:gap-[25px] border-t border-[#292F31] py-[20px] md:py-[25px] lg:py-[30px]">
+                    <p class="text-white !mb-0">
+                        © FAREXEL. All Rights Reserved. Powered by <a href="#" class="text-primary font-semibold hover:underline" target="_blank">BuildWithVivek</a>
+                    </p>
+                    <ul class="flex items-center gap-[15px] lg:gap-[20px] md:justify-end">
+                        <li>
+                            <a href="privacy-policy.html" class="text-white hover:text-primary">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <span class="block w-px h-[17px] bg-[#D9D9D9]/20"></span>
+                        </li>
+                        <li>
+                            <a href="terms-of-service.html" class="text-white hover:text-primary">
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Back To Top -->
+        <button
+            type="button"
+            id="backToTopBtn"
+        >
+            <i class="flaticon-up-arrow"></i>
+        </button>
+        <!-- End Back To Top -->
+
+        <!-- LTR/RTL Mode -->
+        <button
+            type="button"
+            id="ltrRtlToggle"
+        >
+            <i class="ri-translate"></i>
+        </button>
+        <!-- End LTR/RTL Mode -->
+
+        <!-- Links Of JS File -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/scrollCue.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links Of CSS File -->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/flaticon_rentq.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/scrollCue.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon -->
+		<link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+        <!-- Title -->
+        <title>RentQ - Tailwind Car Rental HTML Template</title>
+
+        <!-- Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="min-h-screen flex flex-col">
+
+        <!-- Preloader -->
+        <div
+            id="preloader"
+            class="fixed inset-0 z-[999] bg-white dark:bg-dark text-center flex items-center justify-center gap-[18px]"
+        >
+            <div class="wheel-loader w-[40px] h-[40px] rounded-full border-[5px] border-black/10 dark:border-white/10 !border-t-primary animate-spin"></div>
+            <span class="inline-flex h-[40px] max-h-[40px] items-center shrink-0">
+                <img src="assets/images/logo_six.png" class="dark:!hidden h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+                <img src="assets/images/logo_six.png" class="!hidden dark:!inline h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+            </span>
+        </div>
+        <!-- End Preloader -->
+        
+        <!-- Top Header -->
+        <div class="bg-primary text-white py-[13px]">
+            <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-[8px] md:gap-[10px] lg:gap-[25px]">
+                    <div class="flex flex-wrap justify-center lg:justify-start items-center gap-[8px] md:gap-[15px] xl:gap-[25px] font-medium">
+                        <a href="/cdn-cgi/l/email-protection#3a525f5656554d7a485f544e4b14595557" class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px] hover:text-white/80">
+                            <i class="ri-mail-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            <span class="__cf_email__" data-cfemail="83ebe6efefecf4c3f1e6edf7f2ade0ecee">contact@farexel.com</span>
+                        </a>
+                        <span class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-time-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            Mon - Fri: 9:00 AM - 8:00 PM
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap justify-center lg:justify-end items-center gap-[8px] md:gap-[15px] xl:gap-[25px] font-medium">
+                        <a
+                            href="tel:+1855-5079484"
+                            class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px] hover:text-white/80"
+                        >
+                            <i class="ri-phone-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            +1 855-507-9484
+                        </a>
+                        <div class="relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-global-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            Lang:
+                            <select class="appearance-none cursor-pointer outline-0" name="lang" id="lang">
+                                <option selected value="en">
+                                    EN
+                                </option>
+                                <option value="fr">
+                                    FR
+                                </option>
+                                <option value="es">
+                                    ES
+                                </option>
+                                <option value="de">
+                                    DE
+                                </option>
+                                <option value="pt">
+                                    PT
+                                </option>
+                            </select>
+                        </div>
+                        <div class="flex items-center gap-[7px] md:gap-[10px] relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-user-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            <a
+                                href="login.html"
+                                class="hover:text-white/80"
+                            >
+                                Login
+                            </a>
+                            <div class="w-px h-[12px] md:h-[15px] bg-white/30"></div>
+                            <a
+                                href="register.html"
+                                class="hover:text-white/80"
+                            >
+                                Register
+                            </a>
+                        </div>
+                        <button
+                            type="button"
+                            id="lightDarkToggle"
+                            class="inline-block leading-none"
+                        >
+                            <i class="ri-sun-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Top Header -->
+
+        <!-- Header -->
+        <header
+            class="relative z-[9] py-[15px] border-b lg:border-b-0 border-black/10 dark:border-white/10"
+            id="navbar"
+        >
+            <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                <div class="relative flex items-center flex-wrap lg:flex-nowrap justify-between lg:justify-start">
+                    <a
+                        href="index.html"
+                        class="flex-none inline-flex items-center shrink-0 self-center h-[40px] max-h-[40px] min-w-0"
+                    >
+                        <img src="assets/images/logo_six.png" class="dark:!hidden h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+                        <img src="assets/images/logo_six.png" class="!hidden dark:!inline h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="white-logo">
+                    </a>
+                    <div class="flex-none lg:hidden">
+                        <button
+                            type="button"
+                            class="navbar-burger-toggle inline-block leading-none"
+                        >
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                        </button>
+                    </div>
+                    <div class="hidden lg:flex items-center grow basis-full basis-auto gap-[25px] xl:gap-[40px]">
+                        <ul class="navbar-nav flex items-center flex-row gap-[25px] xl:gap-[30px] ltr:ml-auto rtl:mr-auto">
+                            <li class="nav-item relative">
+                                <a
+                                    href="index.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="vehicles.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Services
+                                </a>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="about.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="drivers.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Team
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="testimonials.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Testimonials
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="faq.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            FAQs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Portfolio
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="shop.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Photos
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="shop.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Videos
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Grid
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-details.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="contact.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex items-center gap-[10px]">
+                            <div class="relative">
+                                <button
+                                    type="button"
+                                    id="searchBtn"
+                                    class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-2xl relative text-black dark:text-white hover:text-primary"
+                                >
+                                    <i class="ri-search-line"></i>
+                                </button>
+                                <div
+                                    id="searchBox"
+                                    class="absolute mt-[10px] top-full ltr:right-0 rtl:left-0 w-[380px] xl:w-[420px] bg-white dark:bg-black p-[20px] md:p-[25px] lg:p-[30px] invisible opacity-0 transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none"
+                                >
+                                    <form
+                                        action="#"
+                                        class="relative"
+                                    >
+                                        <input type="text" class="form-input dark:!bg-dark" placeholder="Search for anything" name="search" id="searchInput">
+                                        <button
+                                            class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-2xl leading-none text-black dark:text-white hover:text-primary"
+                                            type="submit"
+                                        >
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <a
+                                href="cart.html"
+                                class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-2xl relative text-black dark:text-white hover:text-primary"
+                            >
+                                <i class="ri-shopping-cart-line"></i>
+                                <span class="flex items-center justify-center rounded-full bg-primary text-white w-[18px] h-[18px] text-xs font-medium absolute top-0 ltr:right-0 rtl:left-0">
+                                    0
+                                </span>
+                            </a>
+                            <button
+                                type="button"
+                                class="navbar-burger-toggle ltr:ml-[10px] rtl:mr-[10px] ltr:xl:ml-[20px] rtl:xl:mr-[20px] inline-block leading-none text-2xl transition-all duration-300 ease-in-out text-black dark:text-white hover:text-primary"
+                            >
+                                <i class="ri-menu-3-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header -->
+        
+        <!-- Sidebar Modal -->
+        <div class="sidebar-modal">
+            <div class="sidebar-modal-header">
+                <a
+                    href="index.html"
+                    class="flex-none inline-flex items-center shrink-0 h-[40px] max-h-[40px] min-w-0"
+                >
+                    <img src="assets/images/logo_six.png" class="dark:!hidden h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+                    <img src="assets/images/logo_six.png" class="!hidden dark:!inline h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="white-logo">
+                </a>
+                <button
+                    type="button"
+                    class="inline-block text-2xl leading-none text-black dark:text-white hover:text-primary"
+                >
+                    <i class="flaticon-close"></i>
+                </button>
+            </div>
+            <div class="sidebar-modal-body scrollbar">
+                <p class="font-bold text-black dark:text-white text-xl md:text-2xl lg:text-3xl !leading-[1.2]">
+                    Premium car rentals with transparent pricing and exceptional service.
+                </p>
+                <ul class="sidebar-navbar-nav mt-[20px] md:mt-[30px] lg:mt-[40px] lg:hidden">
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="index.html"
+                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="vehicles.html"
+                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle active relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="about.html"
+                                    class="nav-link active relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="drivers.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Team
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="testimonials.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="faq.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="shop.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Photos
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="shop.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Videos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-grid.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Grid
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-details.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Details
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="contact.html"
+                            class="nav-link relative font-medium block text-black dark:text-white hover:text-primary"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px] mt-[20px] md:mt-[30px] lg:mt-[40px]">
+                    Contact
+                </h3>
+                <ul class="text-base mb-[20px] md:mb-[30px] lg:mb-[40px]">
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Call:
+                        <a
+                            href="tel:+18558079484"
+                            class="font-bold md:text-lg lg:text-xl hover:text-primary"
+                        >
+                            +1 855 - 807 9888
+                        </a>
+                    </li>
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Email:
+                        <a href="/cdn-cgi/l/email-protection#a2cac7cececde2d0c7ccd6d38cc1cdcf" class="font-bold md:text-lg lg:text-xl text-primary hover:underline">
+                            <span class="__cf_email__" data-cfemail="f49c9198989bb486919a8085da979b99">contact@farexel.com</span>
+                        </a>
+                    </li>
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Address:
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="font-semibold hover:text-primary"
+                        >
+                        Riyadh, Saudi Arabia, CA 90045
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px]">
+                    Social
+                </h3>
+                <ul>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-facebook-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-twitter-x-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Twitter/X
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-linkedin-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-instagram-line w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-modal-footer">
+                <a
+                    href="cart.html"
+                    class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-xl relative text-black dark:text-white hover:text-primary"
+                >
+                    <i class="ri-shopping-cart-line"></i>
+                    <span class="flex items-center justify-center rounded-full bg-primary text-white w-[18px] h-[18px] text-xs font-medium absolute top-0 ltr:right-0 rtl:left-0">
+                        0
+                    </span>
+                </a>
+                <form
+                    action="#"
+                    class="relative flex-1"
+                >
+                    <input type="text" class="form-input dark:!bg-dark" placeholder="Search for anything">
+                    <button
+                        class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-xl leading-none text-black dark:text-white hover:text-primary"
+                        type="submit"
+                    >
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="backdrop"></div>
+        <!-- End Sidebar Modal -->
+
+        <!-- Main -->
+        <main class="flex-1">
+            
+            <!-- Page Banner -->
+            <div
+                class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px] bg-cover bg-center bg-no-repeat relative z-[1] text-center ltr:lg:text-left rtl:lg:text-right"
+                style="background-image: url(assets/images/bg-images/bg-image9.jpg);"
+            >
+                <div class="container">
+                    <h2 class="mb-[8px] text-[34px] md:text-[44px] lg:text-[54px] xl:text-[64px] leading-[1.2] xl:max-w-[985px]">
+                        About Us
+                    </h2>
+                    <ul class="flex flex-wrap items-center justify-center lg:justify-start gap-[10px] md:gap-[15px]">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="font-medium text-primary hover:underline"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <span class="block w-px h-[15px] bg-black dark:bg-white ltr:rotate-[15deg] rtl:rotate-[-15deg] mt-px"></span>
+                        </li>
+                        <li>
+                            About Us
+                        </li>
+                    </ul>
+                    <div class="absolute bottom-0 ltr:right-0 rtl:left-0 bg-white dark:bg-dark ltr:rounded-tl-[15px] rtl:rounded-tr-[15px] py-[25px] px-[50px] hidden lg:block">
+                        <img
+                            src="assets/images/car.gif"
+                            class="ltr:-scale-x-100"
+                            data-cue="slideInUp"
+                            alt="car"
+                        >
+                    </div>
+                </div>
+                <div class="absolute inset-0 -z-[1] bg-dark/90 hidden dark:block"></div>
+            </div>
+            <!-- End Page Banner -->
+            
+            <!-- Who We Are -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
+                <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
+                        <div
+                            class="lg:col-span-1 ltr:xl:pl-[35px] rtl:xl:pr-[35px]"
+                            data-cues="slideInUp"
+                            data-group="funfactsContent"
+                        >
+                            <div class="py-[15px] md:pt-[20px] md:pb-[25px] border-b border-[#ECECEC] dark:border-white/10 last:border-b-0 first:pt-0 last:pb-0 xl:max-w-[300px] xl:mx-auto">
+                                <div class="leading-none font-medium text-[50px] md:text-[80px] lg:text-[110px] mb-[5px] text-black dark:text-white">
+                                    50K<span class="font-normal text-4xl md:text-6xl text-body dark:text-white/70">+</span>
+                                </div>
+                                <span class="block">
+                                    Services Delivered
+                                </span>
+                            </div>
+                            <div class="py-[15px] md:pt-[20px] md:pb-[25px] border-b border-[#ECECEC] dark:border-white/10 last:border-b-0 first:pt-0 last:pb-0 xl:max-w-[300px] xl:mx-auto">
+                                <div class="leading-none font-medium text-[50px] md:text-[80px] lg:text-[110px] mb-[5px] text-black dark:text-white">
+                                    300<span class="font-normal text-4xl md:text-6xl text-body dark:text-white/70">+</span>
+                                </div>
+                                <span class="block">
+                                    Services Delivered
+                                </span>
+                            </div>
+                        </div>
+                        <div
+                            class="lg:col-span-2 ltr:xl:pl-[50px] rtl:xl:pr-[50px]"
+                            data-cues="slideInUp"
+                            data-group="whoWeAreContent"
+                        >
+                            <span class="block font-bold text-primary mb-[8px] md:mb-[10px]">
+                                Who We Are
+                            </span>
+                            <h2 class="mb-[15px] md:mb-[20px] text-xl md:text-2xl lg:text-3xl leading-[1.3] xl:max-w-[875px]">
+                                FAREXEL exists for those who expect more than just a clean vehicle - we deliver a standard where every surface reflects precision, depth and uncompromising perfection.
+                            </h2>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px]">
+                                <div>
+                                    <p>
+                                        From restoring lost brilliance to preserving a flawless finish, every service at FAREXEL is approached with an obsessive attention to detail and a deep respect for the machine. It’s not just about how your vehicle looks - it’s about how it feels, how it holds its presence and how long that perfection lasts.
+                                    </p>
+                                    <a
+                                        href="services.html"
+                                        class="primary-btn group mt-[5px] md:mt-[10px] lg:mt-[20px]"
+                                    >
+                                        <span>
+                                            Explore Our Services
+                                        </span>
+                                        <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                    <ul class="grid grid-cols-2 gap-[10px] font-medium text-black dark:text-white mt-[20px] md:mt-[30px] lg:mt-[40px]">
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Precision in Every Detail
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Built on Trust and Transparent Process
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Clarity Without Compromise
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Crafted for Lasting Impact
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Defined by Excellence
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Premium Care Standards
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="text-center ltr:xl:pl-[45px] rtl:xl:pr-[45px]">
+                                    <img src="assets/images/who-we-are.jpg" class="rounded-[15px]" alt="who-we-are">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Who We Are -->
+            
+            <!-- Brands -->
+            <div class="pb-[60px] md:pb-[80px] lg:pb-[100px] xl:pb-[120px]">
+                <div class="container">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center lg:-mb-px">
+                        <h2
+                            class="mb-0 text-xl md:text-2xl lg:text-3xl leading-[1.2] xl:max-w-[500px]"
+                            data-cue="slideInUp"
+                        >
+                        Trusted by Those Who Value Excellence
+                        </h2>
+                        <div
+                            class="grid grid-cols-2 lg:grid-cols-3 gap-[15px] lg:gap-0 items-center text-center relative ltr:lg:-left-[12px] rtl:lg:-right-[12px] ltr:lg:-mr-[14px] rtl:lg:-ml-[14px] mb-[15px] lg:mb-0"
+                            data-cues="slideInUp"
+                            data-group="brandsContent2"
+                        >
+                            <div class="h-[150px] md:h-[175px] p-[15px] flex items-center justify-center rounded-[15px] border border-[#D9D9D9] dark:border-white/10 ltr:md:-mr-px rtl:md:-ml-px ltr:md:last:mr-0 rtl:md:last:ml-0">
+                                <img src="assets/images/brands/brand1.svg" class="dark:invert" alt="brand-image">
+                            </div>
+                            <div class="h-[150px] md:h-[175px] p-[15px] flex items-center justify-center rounded-[15px] border border-[#D9D9D9] dark:border-white/10 ltr:md:-mr-px rtl:md:-ml-px ltr:md:last:mr-0 rtl:md:last:ml-0">
+                                <img src="assets/images/brands/brand2.svg" class="dark:invert" alt="brand-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-[15px] lg:gap-0 text-center"
+                        data-cues="slideInUp"
+                        data-group="brandsContent3"
+                    >
+                        <div class="h-[150px] md:h-[175px] p-[15px] flex items-center justify-center rounded-[15px] border border-[#D9D9D9] dark:border-white/10 ltr:md:-mr-px rtl:md:-ml-px ltr:md:last:mr-0 rtl:md:last:ml-0">
+                            <img src="assets/images/brands/brand3.svg" class="dark:invert" alt="brand-image">
+                        </div>
+                        <div class="h-[150px] md:h-[175px] p-[15px] flex items-center justify-center rounded-[15px] border border-[#D9D9D9] dark:border-white/10 ltr:md:-mr-px rtl:md:-ml-px ltr:md:last:mr-0 rtl:md:last:ml-0">
+                            <img src="assets/images/brands/brand4.svg" class="dark:invert" alt="brand-image">
+                        </div>
+                        <div class="h-[150px] md:h-[175px] p-[15px] flex items-center justify-center rounded-[15px] border border-[#D9D9D9] dark:border-white/10 ltr:md:-mr-px rtl:md:-ml-px ltr:md:last:mr-0 rtl:md:last:ml-0">
+                            <img src="assets/images/brands/brand5.svg" class="dark:invert" alt="brand-image">
+                        </div>
+                        <div class="h-[150px] md:h-[175px] p-[15px] flex items-center justify-center rounded-[15px] border border-[#D9D9D9] dark:border-white/10 ltr:md:-mr-px rtl:md:-ml-px ltr:md:last:mr-0 rtl:md:last:ml-0">
+                            <img src="assets/images/brands/brand6.svg" class="dark:invert" alt="brand-image">
+                        </div>
+                        <div class="h-[150px] md:h-[175px] p-[15px] flex items-center justify-center rounded-[15px] border border-[#D9D9D9] dark:border-white/10 ltr:md:-mr-px rtl:md:-ml-px ltr:md:last:mr-0 rtl:md:last:ml-0">
+                            <img src="assets/images/brands/brand7.svg" class="dark:invert" alt="brand-image">
+                        </div>
+                        <div class="h-[150px] md:h-[175px] p-[15px] flex items-center justify-center rounded-[15px] border border-[#D9D9D9] dark:border-white/10 ltr:md:-mr-px rtl:md:-ml-px ltr:md:last:mr-0 rtl:md:last:ml-0">
+                            <img src="assets/images/brands/brand8.svg" class="dark:invert" alt="brand-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Brands -->
+            
+            <!-- Why Choose RentQ -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px] bg-[#FFF1F1] dark:bg-black">
+                <div class="container">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px]">
+                        <div
+                            data-cues="slideInUp"
+                            data-group="whyChooseContent"
+                        >
+                            <span class="block font-bold text-primary mb-[8px] md:mb-[10px]">
+                                Why Choose FAREXEL
+                            </span>
+                            <h2 class="mb-[20px] md:mb-[30px] lg:mb-[40px] text-xl md:text-2xl lg:text-3xl leading-[1.3]">
+                                Discover what sets us apart in refined detailing and why discerning vehicle owners trust us to maintain, protect and elevate their vehicles.
+                            </h2>
+                            <div class="relative md:max-w-[535px]">
+                                <div class="rounded-[15px] text-center bg-primary text-white absolute bottom-[20px] md:bottom-[110px] ltr:left-[20px] rtl:right-[20px] ltr:md:left-[35px] rtl:md:right-[35px] py-[14px] md:py-[17px] px-[15px] md:px-[25px]">
+                                    <div class="font-medium text-[44px] md:text-[64px] leading-none mb-[5px]">
+                                        15<span class="font-normal text-3xl md:text-4xl">+</span>
+                                    </div>
+                                    <span class="block mx-auto md:max-w-[100px]">
+                                        Years of Detailing Excellence
+                                    </span>
+                                </div>
+                                <div class="md:max-w-[312px]">
+                                    <img
+                                        src="assets/images/why-choose-us/why-choose-us4.jpg"
+                                        class="rounded-[15px]"
+                                        alt="why-choose-us-image"
+                                    >
+                                </div>
+                                <div class="md:max-w-[312px] ltr:md:ml-auto rtl:md:mr-auto mt-[25px] md:-mt-[170px]">
+                                    <img
+                                        src="assets/images/why-choose-us/why-choose-us5.jpg"
+                                        class="rounded-[15px]"
+                                        alt="why-choose-us-image"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="accordion"
+                            data-cues="slideInUp"
+                            data-group="whyChooseAccordion"
+                        >
+                            <div class="accordion-item active py-[15px] md:py-[20px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white"
+                                    type="button"
+                                >
+                                    <span class="flex items-center gap-[15px] md:gap-[20px]">
+                                        <span class="flex flex-none items-center justify-center bg-[#FFF1F1] dark:bg-black w-[60px] md:w-[100px] h-[60px] md:h-[100px] rounded-[10px] text-black dark:text-white text-3xl md:text-5xl pt-[5px]">
+                                            <i class="flaticon-price-tag-1"></i>
+                                        </span>
+                                        Years of Detailing Excellence
+                                    </span>
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pt-[15px] md:pt-[20px] md:pb-[5px]">
+                                    <p>
+                                        No assumptions, no hidden processes - every step is clearly communicated, ensuring you know exactly how your vehicle is being treated.
+                                    </p>
+                                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-[10px] font-medium text-black dark:text-white md:mt-[20px]">
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Complete clarity at every stage
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Complete clarity at every stage
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            No unnecessary add-ons
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Clear service breakdown before execution
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[15px] md:py-[20px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white"
+                                    type="button"
+                                >
+                                    <span class="flex items-center gap-[15px] md:gap-[20px]">
+                                        <span class="flex flex-none items-center justify-center bg-[#FFF1F1] dark:bg-black w-[60px] md:w-[100px] h-[60px] md:h-[100px] rounded-[10px] text-black dark:text-white text-3xl md:text-5xl pt-[5px]">
+                                            <i class="flaticon-protection"></i>
+                                        </span>
+                                        Advanced Protection Solutions
+                                    </span>
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pt-[15px] md:pt-[20px] md:pb-[5px] hidden">
+                                    <p>
+                                        From high-performance coatings to surface treatments, we use proven methods designed to preserve and enhance your vehicle’s finish over time.
+                                    </p>
+                                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-[10px] font-medium text-black dark:text-white md:mt-[20px]">
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Long-lasting surface protection
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Premium-grade formulations
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Enhanced durability & shine
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Resistance against daily wear & elements
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[15px] md:py-[20px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white"
+                                    type="button"
+                                >
+                                    <span class="flex items-center gap-[15px] md:gap-[20px]">
+                                        <span class="flex flex-none items-center justify-center bg-[#FFF1F1] dark:bg-black w-[60px] md:w-[100px] h-[60px] md:h-[100px] rounded-[10px] text-black dark:text-white text-3xl md:text-5xl pt-[5px]">
+                                            <i class="flaticon-insurance"></i>
+                                        </span>
+                                        Flawless Finish Standards
+                                    </span>
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pt-[15px] md:pt-[20px] md:pb-[5px] hidden">
+                                    <p>
+                                        Every vehicle is handled with precision to achieve a finish that reflects depth, clarity, and a level of detailing that stands apart.
+                                    </p>
+                                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-[10px] font-medium text-black dark:text-white md:mt-[20px]">
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Attention to every detail
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Consistent quality results
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Refined finishing techniques
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Mirror-like depth & surface clarity
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="accordion-item py-[15px] md:py-[20px] border-b first:border-t border-[#ECECEC] dark:border-white/10">
+                                <button
+                                    class="accordion-toggle flex items-center justify-between gap-[15px] w-full ltr:text-left rtl:text-right font-bold text-base md:text-lg lg:text-xl leading-[1.2] text-black dark:text-white"
+                                    type="button"
+                                >
+                                    <span class="flex items-center gap-[15px] md:gap-[20px]">
+                                        <span class="flex flex-none items-center justify-center bg-[#FFF1F1] dark:bg-black w-[60px] md:w-[100px] h-[60px] md:h-[100px] rounded-[10px] text-black dark:text-white text-3xl md:text-5xl pt-[5px]">
+                                            <i class="flaticon-real-time"></i>
+                                        </span>
+                                        Convenience Without Compromise
+                                    </span>
+                                    <span class="flex flex-none items-center justify-center font-normal rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] text-primary border border-[#D9D9D9] dark:border-white/10 text-xl md:text-2xl">
+                                        <i class="ri-add-fill"></i>
+                                    </span>
+                                </button>
+                                <div class="accordion-panel pt-[15px] md:pt-[20px] md:pb-[5px] hidden">
+                                    <p>
+                                        A seamless experience designed around your schedule, ensuring efficiency, reliability, and complete peace of mind.
+                                    </p>
+                                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-[10px] font-medium text-black dark:text-white md:mt-[20px]">
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Easy booking process
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Timely service delivery
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Dedicated customer support
+                                        </li>
+                                        <li class="relative ltr:pl-[27px] rtl:pr-[27px]">
+                                            <i class="ri-check-double-line absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-primary text-xl"></i>
+                                            Smooth coordination via WhatsApp
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Why Choose RentQ -->
+
+            <!-- Drivers -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
+                <div class="container">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] lg:items-start"
+                        data-cues="slideInUp"
+                        data-group="driversContent"
+                    >
+                        <div class="lg:col-span-1 lg:sticky lg:top-[150px] ltr:xl:pr-[25px] rtl:xl:pl-[25px]">
+                            <span class="block font-bold text-primary mb-[10px]">
+                                Our Experts
+                            </span>
+                            <h2 class="mb-0 text-xl md:text-2xl lg:text-3xl leading-[1.2]">
+                                Crafted by Experts Who Redefine Automotive Perfection
+                            </h2>
+                        </div>
+                        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-[25px]">
+                            <div class="group overflow-hidden relative rounded-[15px]">
+                                <img src="assets/images/drivers/driver1.jpg" class="rounded-[15px] transition-all duration-500 ease-in-out group-hover:scale-110" alt="driver-image">
+                                <div class="absolute left-0 right-0 bottom-0 z-[1] p-[20px] md:p-[25px] lg:p-[30px] flex items-center justify-between">
+                                    <div>
+                                        <h3 class="!text-white mb-[5px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                            <a href="driver-details.html" class="hover:text-primary">
+                                                Ahmed Al Mansoori
+                                            </a>
+                                        </h3>
+                                        <span class="text-white">
+                                            Senior Detailing Specialist
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="inline-block text-13 md:text-sm bg-primary text-white rounded-[30px] py-px px-[8px]">
+                                            4.9 (128 reviews)
+                                        </span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 rounded-[15px]"
+                                    style="background: linear-gradient(180deg, rgba(13, 20, 22, 0) 50%, rgba(13, 20, 22, 0.9) 100%);"
+                                ></div>
+                            </div>
+                            <div class="group overflow-hidden relative rounded-[15px]">
+                                <img src="assets/images/drivers/driver2.jpg" class="rounded-[15px] transition-all duration-500 ease-in-out group-hover:scale-110" alt="driver-image">
+                                <div class="absolute left-0 right-0 bottom-0 z-[1] p-[20px] md:p-[25px] lg:p-[30px] flex items-center justify-between">
+                                    <div>
+                                        <h3 class="!text-white mb-[5px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                            <a href="driver-details.html" class="hover:text-primary">
+                                                Daniel Carter
+                                            </a>
+                                        </h3>
+                                        <span class="text-white">
+                                            Paint Correction Expert
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="inline-block text-13 md:text-sm bg-primary text-white rounded-[30px] py-px px-[8px]">
+                                            5.0 (94 reviews)
+                                        </span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 rounded-[15px]"
+                                    style="background: linear-gradient(180deg, rgba(13, 20, 22, 0) 50%, rgba(13, 20, 22, 0.9) 100%);"
+                                ></div>
+                            </div>
+                            <div class="group overflow-hidden relative rounded-[15px]">
+                                <img src="assets/images/drivers/driver3.jpg" class="rounded-[15px] transition-all duration-500 ease-in-out group-hover:scale-110" alt="driver-image">
+                                <div class="absolute left-0 right-0 bottom-0 z-[1] p-[20px] md:p-[25px] lg:p-[30px] flex items-center justify-between">
+                                    <div>
+                                        <h3 class="!text-white mb-[5px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                            <a href="driver-details.html" class="hover:text-primary">
+                                                Khalid Al Nuaimi
+                                            </a>
+                                        </h3>
+                                        <span class="text-white">
+                                            Interior Detailing Specialist
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="inline-block text-13 md:text-sm bg-primary text-white rounded-[30px] py-px px-[8px]">
+                                            4.8 (156 reviews
+                                        </span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 rounded-[15px]"
+                                    style="background: linear-gradient(180deg, rgba(13, 20, 22, 0) 50%, rgba(13, 20, 22, 0.9) 100%);"
+                                ></div>
+                            </div>
+                            <div class="group overflow-hidden relative rounded-[15px]">
+                                <img src="assets/images/drivers/driver4.jpg" class="rounded-[15px] transition-all duration-500 ease-in-out group-hover:scale-110" alt="driver-image">
+                                <div class="absolute left-0 right-0 bottom-0 z-[1] p-[20px] md:p-[25px] lg:p-[30px] flex items-center justify-between">
+                                    <div>
+                                        <h3 class="!text-white mb-[5px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                            <a href="driver-details.html" class="hover:text-primary">
+                                                Marco Russo
+                                            </a>
+                                        </h3>
+                                        <span class="text-white">
+                                            Interior Detailing Specialist
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span class="inline-block text-13 md:text-sm bg-primary text-white rounded-[30px] py-px px-[8px]">
+                                            4.9 (75 reviews)
+                                        </span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 rounded-[15px]"
+                                    style="background: linear-gradient(180deg, rgba(13, 20, 22, 0) 50%, rgba(13, 20, 22, 0.9) 100%);"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Drivers -->
+            
+            <!-- CTA -->
+            <div class="container">
+                <div
+                    class="px-[20px] md:px-[40px] lg:px-[60px] xl:px-[100px] pt-[140px] md:pt-[280px] lg:pt-[240px] pb-[40px] md:pb-[60px] lg:pb-[80px] xl:pb-[100px] rounded-[15px] bg-black text-white/70 bg-cover bg-center bg-no-repeat"
+                    style="background-image: url(assets/images/bg-images/bg-image6.jpg);"
+                    data-cue="slideInUp"
+                >
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[20px] md:gap-[25px] items-end">
+                        <div>
+                            <h2 class="!text-white mb-[10px] text-xl md:text-2xl lg:text-3xl leading-[1.2]">
+                                Ready to Transform Your Vehicle’s Presence?
+                            </h2>
+                            <p>
+                                Experience precision detailing and premium care that elevates your vehicle beyond the ordinary.
+                            </p>
+                        </div>
+                        <div class="md:flex items-center lg:justify-end gap-[20px]">
+                            <a
+                                href="contact.html"
+                                class="primary-btn group"
+                            >
+                                <span>
+                                    Book Your Service
+                                </span>
+                                <i class="ri-calendar-2-line"></i>
+                            </a>
+                            <div class="mt-[15px] md:mt-0">
+                                <span class="block text-white mb-[5px]">
+                                    Book Your Service : 
+                                </span>
+                                <a
+                                    href="tel:+1855-8079484"
+                                    class="inline-block font-bold text-white hover:text-primary text-base md:text-lg lg:text-xl leading-none"
+                                >
+                                +1 855 - 807 9484
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End CTA -->
+            
+            <!-- Reviews -->
+            <div
+                class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px]"
+                data-cues="slideInUp"
+                data-group="reviewsContent"
+            >
+                <div class="container">
+                    <div class="text-center lg:max-w-[885px] mx-auto mb-[30px] md:mb-[35px] lg:mb-[40px]">
+                        <span class="block font-bold text-primary mb-[10px]">
+                            What Our Clients Say
+                        </span>
+                        <h2 class="mb-0 text-xl md:text-2xl lg:text-3xl leading-[1.2]">
+                            Don’t just take our word for it — experience what our clients say after seeing their vehicles transformed beyond expectations.
+                        </h2>
+                    </div>
+                </div>
+                <div class="container lg:!px-0 lg:!max-w-full 2xl:!max-w-[1920px]">
+                    <div class="swiper reviewsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="border border-[#0D1416] rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px]">
+                                    <div class="flex items-center leading-none text-primary gap-[2px] mb-[15px] md:mb-[20px]">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <p class="font-medium text-base md:text-lg lg:text-xl">
+                                        “The finish was beyond anything I expected. The depth, the clarity — it genuinely felt like I was driving a brand-new car again.”
+                                    </p>
+                                    <span class="block md:mt-[25px]">
+                                        — Faisal Al Nuaimi
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="border border-[#0D1416] rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px]">
+                                    <div class="flex items-center leading-none text-primary gap-[2px] mb-[15px] md:mb-[20px]">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-fill"></i>
+                                    </div>
+                                    <p class="font-medium text-base md:text-lg lg:text-xl">
+                                        “Completely transparent process and exceptional results. From consultation to delivery, everything was handled with true professionalism.”
+                                    </p>
+                                    <span class="block md:mt-[25px]">
+                                        — Ahmed Al Mansoori
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="border border-[#0D1416] rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px]">
+                                    <div class="flex items-center leading-none text-primary gap-[2px] mb-[15px] md:mb-[20px]">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-line"></i>
+                                    </div>
+                                    <p class="font-medium text-base md:text-lg lg:text-xl">
+                                        “Attention to detail is on another level. Every surface was refined perfectly — you can instantly see and feel the difference.”
+                                    </p>
+                                    <span class="block md:mt-[25px]">
+                                        — Omar Al Zaabi
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="border border-[#0D1416] rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px]">
+                                    <div class="flex items-center leading-none text-primary gap-[2px] mb-[15px] md:mb-[20px]">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <p class="font-medium text-base md:text-lg lg:text-xl">
+                                        “From the moment I saw the final result, I knew this wasn’t just a service — it was a transformation. The finish, the feel, everything was simply flawless.”
+                                    </p>
+                                    <span class="block md:mt-[25px]">
+                                        — Khalid Al Nuaimi
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="border border-[#0D1416] rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px]">
+                                    <div class="flex items-center leading-none text-primary gap-[2px] mb-[15px] md:mb-[20px]">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                    <p class="font-medium text-base md:text-lg lg:text-xl">
+                                        “I’ve tried multiple detailing services before, but nothing comes close to this level of precision. The finish holds its depth even days later — truly exceptional work.”
+                                    </p>
+                                    <span class="block md:mt-[25px]">
+                                        — Saif Al Mazrouei
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-[30px] md:mt-[35px] lg:mt-[40px] xl:mt-[50px]">
+                    <div class="flex flex-wrap justify-center md:justify-between items-center gap-[25px] lg:mx-auto lg:max-w-[830px]">
+                        <div class="text-center">
+                            <div class="w-[75px] h-[75px] flex items-center justify-center rounded-full mx-auto mb-[18px]">
+                                <img src="assets/images/icons/tripadvisor2.svg" alt="tripadvisor">
+                            </div>
+                            <h3 class="mb-[8px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Client Satisfaction
+                            </h3>
+                            <div class="flex items-center justify-center gap-[7px] leading-none mb-[6px]">
+                                <span class="block font-bold text-base md:text-lg lg:text-xl">
+                                    4.8 Average Rating
+                                </span>
+                                <div class="flex items-center text-primary gap-px">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                </div>
+                            </div>
+                            <span class="block text-13 md:text-sm">
+                                Based on Consistent Service Excellence
+                            </span>
+                        </div>
+                        <div class="w-px h-[110px] bg-white/30 hidden md:block"></div>
+                        <div class="text-center">
+                            <div class="w-[75px] h-[75px] flex items-center justify-center rounded-full mx-auto mb-[18px]">
+                                <img src="assets/images/icons/google2.svg" alt="google">
+                            </div>
+                            <h3 class="mb-[8px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Google Reviews
+                            </h3>
+                            <div class="flex items-center justify-center gap-[7px] leading-none mb-[6px]">
+                                <span class="block font-bold text-base md:text-lg lg:text-xl">
+                                    (4.9)
+                                </span>
+                                <div class="flex items-center text-primary gap-px">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                            <span class="block text-13 md:text-sm">
+                                2,400+ Verified Clients
+                            </span>
+                        </div>
+                        <div class="w-px h-[110px] bg-white/30 hidden md:block"></div>
+                        <div class="text-center">
+                            <div class="w-[75px] h-[75px] flex items-center justify-center rounded-full mx-auto mb-[18px]">
+                                <img src="assets/images/icons/yelp2.svg" alt="yelp">
+                            </div>
+                            <h3 class="mb-[8px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Trusted by Owners
+                            </h3>
+                            <div class="flex items-center justify-center gap-[7px] leading-none mb-[6px]">
+                                <span class="block font-bold text-base md:text-lg lg:text-xl">
+                                    1,000+ Vehicles Detailed
+                                </span>
+                                <div class="flex items-center text-primary gap-px">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                </div>
+                            </div>
+                            <span class="block text-13 md:text-sm">
+                                1,000+ Vehicles Detailed
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Reviews -->
+            
+        </main>
+        <!-- End Main -->
+
+        <!-- Footer -->
+        <footer class="bg-black text-white/70 pt-[60px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px]">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
+                    <div class="lg:col-span-1">
+                        <a
+                            href="index.html"
+                            class="inline-block mb-[18px] lg:mb-[26px]"
+                        >
+                            <img
+                                src="assets/images/logo_six.png"
+                                class="block h-auto max-h-[32px] w-auto max-w-[148px] sm:max-w-[160px] object-contain object-left"
+                                alt="ProMotors"
+                            >
+                        </a>
+                        <h3 class="mb-[15px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                            Download Our App
+                        </h3>
+                        <div class="flex flex-wrap items-center gap-[10px]">
+                            <a
+                                href="#"
+                                target="_blank"
+                                class="inline-block relative border border-white/30 bg-[#171E20] rounded-[5px] py-[10px] ltr:pr-[18px] rtl:pl-[18px] ltr:pl-[57px] rtl:pr-[57px] hover:border-primary"
+                            >
+                                <i class="ri-apple-fill text-white absolute top-1/2 -translate-y-1/2 ltr:left-[12px] rtl:right-[12px] text-4xl leading-none -mt-px"></i>
+                                <span class="block text-[#d9d9d9] text-13 md:text-sm leading-none mb-[3px]">
+                                    Download on the
+                                </span>
+                                <span class="block font-bold text-white leading-none">
+                                    App Store
+                                </span>
+                            </a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                class="inline-block relative border border-white/30 bg-[#171E20] rounded-[5px] py-[10px] ltr:pr-[18px] rtl:pl-[18px] ltr:pl-[57px] rtl:pr-[57px] hover:border-primary"
+                            >
+                                <i class="ri-google-play-fill text-white absolute top-1/2 -translate-y-1/2 ltr:left-[12px] rtl:right-[12px] text-4xl leading-none -mt-px"></i>
+                                <span class="block text-[#d9d9d9] text-13 md:text-sm leading-none mb-[3px]">
+                                    Get it on
+                                </span>
+                                <span class="block font-bold text-white leading-none">
+                                    Google Play
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-[25px] ltr:xl:pl-[100px] rtl:xl:pr-[100px]">
+                        <div>
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Company
+                            </h3>
+                            <ul>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="about.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        About us
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="pricing.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Pricing plan
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="locations.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Locations
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="blog-grid.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Our news
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="contact.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Contact us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Social
+                            </h3>
+                            <ul>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Twitter/X
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        LinkedIn
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        YouTube
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 ltr:lg:-ml-[15px] rtl:lg:-mr-[15px]">
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Contact
+                            </h3>
+                            <ul class="text-[#d9d9d9]">
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Call:
+                                    <a
+                                        href="tel:+18558079484"
+                                        class="font-bold md:text-lg lg:text-xl text-white hover:text-primary"
+                                    >
+                                        +1 855 - 807 9484
+                                    </a>
+                                </li>
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Email:
+                                    <a href="/cdn-cgi/l/email-protection#bbd3ded7d7d4fbc9ded5cfca95d8d4d6" class="font-bold md:text-lg lg:text-xl text-primary hover:underline">
+                                        <span class="__cf_email__" data-cfemail="d0b8b5bcbcbf90a2b5bea4a1feb3bfbd">contact@farexel.com</span>
+                                    </a>
+                                </li>
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Address:
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="font-semibold text-white hover:text-primary"
+                                    >
+                                       Riyadh, Saudi Arabia, CA 90045
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-[60px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px]"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-[15px] md:gap-[25px] border-t border-[#292F31] py-[20px] md:py-[25px] lg:py-[30px]">
+                    <p class="text-white !mb-0">
+                        © FAREXEL. All Rights Reserved. Powered by <a href="#" class="text-primary font-semibold hover:underline" target="_blank">BuildWithVivek</a>
+                    </p>
+                    <ul class="flex items-center gap-[15px] lg:gap-[20px] md:justify-end">
+                        <li>
+                            <a href="privacy-policy.html" class="text-white hover:text-primary">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <span class="block w-px h-[17px] bg-[#D9D9D9]/20"></span>
+                        </li>
+                        <li>
+                            <a href="terms-of-service.html" class="text-white hover:text-primary">
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Back To Top -->
+        <button
+            type="button"
+            id="backToTopBtn"
+        >
+            <i class="flaticon-up-arrow"></i>
+        </button>
+        <!-- End Back To Top -->
+
+        <!-- LTR/RTL Mode -->
+        <button
+            type="button"
+            id="ltrRtlToggle"
+        >
+            <i class="ri-translate"></i>
+        </button>
+        <!-- End LTR/RTL Mode -->
+
+        <!-- Links Of JS File -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/scrollCue.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>

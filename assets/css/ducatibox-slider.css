@@ -1,0 +1,660 @@
+/* Ducatibox Slider Section - integrated as-is */
+.wptb-slider {
+	--color-one: #D70006;
+	--color-white: #FFFFFF;
+	--color-white-rgb: 255, 255, 255;
+	--color-gray: #4c4c4c;
+	--color-black: #000000;
+	--font-family-base: 'Montserrat', sans-serif;
+	--font-family-heading: 'Bai Jamjuree', sans-serif;
+	--transition-base: all 0.5s ease-in-out;
+}
+
+/* Slider grid (Bootstrap-like, scoped to slider) */
+.wptb-slider .container {
+	max-width: 1320px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 12px;
+	padding-right: 12px;
+	position: relative;
+	z-index: 2;
+}
+.wptb-slider .row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -12px;
+	margin-right: -12px;
+}
+.wptb-slider .col-sm-12,
+.wptb-slider .col-md-10,
+.wptb-slider .col-md-12,
+.wptb-slider .col-lg-6,
+.wptb-slider .col-lg-8,
+.wptb-slider .col-xxl-7 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 100%;
+}
+.wptb-slider .offset-lg-2 { margin-left: 0; }
+@media (min-width: 576px) {
+	.wptb-slider .col-sm-12 { max-width: 100%; flex: 0 0 100%; }
+}
+@media (min-width: 768px) {
+	.wptb-slider .col-md-10 { max-width: 83.333333%; flex: 0 0 83.333333%; }
+	.wptb-slider .col-md-12 { max-width: 100%; flex: 0 0 100%; }
+	.wptb-slider .d-sm-block { display: block !important; }
+}
+@media (min-width: 992px) {
+	.wptb-slider .col-lg-6 { max-width: 50%; flex: 0 0 50%; }
+	.wptb-slider .col-lg-8 { max-width: 66.666667%; flex: 0 0 66.666667%; }
+	.wptb-slider .offset-lg-2 { margin-left: 16.666667%; }
+}
+@media (min-width: 1400px) {
+	.wptb-slider .col-xxl-7 { max-width: 58.333333%; flex: 0 0 58.333333%; }
+}
+.wptb-slider .d-none { display: none !important; }
+.wptb-slider .text-center { text-align: center; }
+.wptb-slider .text-one { color: var(--color-one); }
+.wptb-slider.pt-0 { padding-top: 0 !important; }
+
+/* Swiper */
+.wptb-slider .swiper-container {
+	position: relative;
+	overflow: hidden;
+}
+.wptb-swiper-dots {
+	position: relative;
+	margin-top: 30px;
+	width: auto;
+	height: 40px;
+	display: block;
+	z-index: 1;
+}
+.wptb-slider .swiper-horizontal>.swiper-pagination-bullets,
+.wptb-slider .swiper-pagination-bullets.swiper-pagination-horizontal {
+	position: relative;
+	top: 0;
+	bottom: auto;
+	margin-top: 0;
+}
+.wptb-slider .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.wptb-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	width: 18px;
+	height: 18px;
+	border-radius: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	background-color: transparent;
+	margin: 0 14px;
+	cursor: pointer;
+	transition: var(--transition-base);
+	position: relative;
+	opacity: 1;
+	font-family: var(--font-family-heading);
+	font-size: 14px;
+	font-weight: 700;
+}
+.wptb-slider .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:before,
+.wptb-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:before {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 8px;
+	height: 8px;
+	background-color: var(--color-one);
+	border-radius: 0;
+	transition: var(--transition-base);
+}
+.wptb-slider .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.wptb-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: rgba(var(--color-white-rgb), 0.2);
+}
+
+/* Layer */
+.wptb-slider .wptb-item-layer {
+	position: absolute;
+	z-index: 1;
+}
+.wptb-slider .wptb-item-layer-one {
+	left: -2%;
+	top: -10%;
+}
+.wptb-slider .wptb-item-layer-two {
+	left: -40%;
+	top: 0%;
+}
+
+/* Main Slider */
+.wptb-slider {
+	position: relative;
+}
+.wptb-slider .wptb-slider--item {
+	position: relative;
+	padding: 300px 0 200px 0;
+	overflow: hidden;
+}
+.wptb-slider .wptb-slider--image {
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 4s linear;
+}
+.wptb-slider .swiper-slide .wptb-slider--image {
+	transform: scale(1.15);
+}
+.wptb-slider .swiper-slide-active .wptb-slider--image {
+	transform: scale(1);
+}
+
+.wptb-slider .wptb-heading {
+	margin-bottom: 0;
+}
+.wptb-slider .wptb-heading .wptb-item--subtitle {
+	color: var(--color-white);
+	font-family: var(--font-family-base);
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 0;
+	display: inline-block;
+	margin-bottom: 23px;
+	transition: all 1000ms ease;
+}
+.wptb-slider .swiper-slide .wptb-heading .wptb-item--subtitle {
+	opacity: 0;
+	transform-origin: top;
+	transform: translateX(200px);
+}
+.wptb-slider .swiper-slide-active .wptb-heading .wptb-item--subtitle {
+	opacity: 1;
+	transform: translateX(0);
+	transition-delay: 500ms;
+}
+
+.wptb-slider .wptb-heading .wptb-item--title {
+	color: var(--color-white);
+	font-size: 70px;
+	font-weight: 600;
+	line-height: 70px;
+	margin-bottom: 50px;
+	transition: all 1000ms ease;
+}
+.wptb-slider .swiper-slide .wptb-heading .wptb-item--title {
+	opacity: 0;
+	transform-origin: top;
+	transform: translateX(200px);
+}
+.wptb-slider .swiper-slide-active .wptb-heading .wptb-item--title {
+	opacity: 1;
+	transform: translateX(0);
+	transition-delay: 800ms;
+}
+.wptb-slider .wptb-heading .wptb-item--title .active {
+	color: var(--color-one);
+}
+
+.wptb-slider .wptb-item--button {
+	display: inline-block;
+	transition: all 900ms ease;
+}
+.wptb-slider .swiper-slide .wptb-item--button {
+	opacity: 0;
+	transform: translateX(200px);
+	transform-origin: top;
+}
+.wptb-slider .swiper-slide-active .wptb-item--button {
+	opacity: 1;
+	transform: translateX(0);
+	transition-delay: 1600ms;
+}
+
+/* Button Two (ducatibox) */
+.wptb-slider .btn-two {
+	position: relative;
+	width: auto;
+	min-width: 230px;
+	height: 60px;
+	padding: 0 60px 0 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	font-family: var(--font-family-base);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: var(--color-white);
+	background: var(--color-one);
+	border: 0;
+	border-radius: 0;
+	letter-spacing: 0.8px;
+	cursor: pointer;
+	overflow: hidden;
+	transition: var(--transition-base);
+	text-decoration: none;
+}
+.wptb-slider .btn-two:hover {
+	background-color: var(--color-white);
+	color: var(--color-one);
+	padding: 0 0 0 60px;
+}
+.wptb-slider .btn-two .btn-wrap {
+	display: flex;
+	align-items: center;
+}
+.wptb-slider .btn-two .text-first {
+	padding: 0 20px;
+	transition: transform 250ms linear 0ms;
+}
+.wptb-slider .btn-two .text-second {
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 0;
+	background-color: var(--color-gray);
+	color: var(--color-white);
+	position: absolute;
+	left: calc(100% - 60px);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	transition: var(--transition-base);
+}
+.wptb-slider .btn-two:hover .text-second {
+	left: 0;
+}
+
+/* Layer animations */
+.swiper-slide-active .wptb-item-layer-one {
+	animation: sliderobject-move1 3s;
+}
+.swiper-slide-active .wptb-item-layer-two {
+	animation: wptb-spin infinite 12s;
+}
+
+@keyframes sliderobject-move1 {
+	0% { left: -30%; top: 10%; }
+	100% { left: -2%; top: -10%; }
+}
+@keyframes wptb-spin {
+	0% { transform: rotate(0); }
+	100% { transform: rotate(359deg); }
+}
+
+/* Responsive */
+@media screen and (max-width: 1400px) {
+	.wptb-slider .wptb-swiper-dots {
+		margin-top: -40px;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.wptb-slider .wptb-swiper-dots {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 40px;
+		width: 40px;
+		height: 200px;
+	}
+	.wptb-slider .swiper-pagination {
+		display: grid;
+	}
+}
+@media screen and (max-width: 1199px) {
+	.wptb-slider {
+		padding-top: 70px;
+	}
+}
+@media screen and (max-width: 1399px) {
+	.wptb-slider .wptb-heading .wptb-item--title {
+		font-size: 54px;
+		line-height: 1.2em;
+	}
+	.wptb-slider .swiper-pagination {
+		top: calc(100% - 50px);
+		margin-top: 0;
+	}
+}
+@media screen and (max-width: 767px) {
+	.wptb-slider .wptb-heading .wptb-item--title {
+		font-size: 40px;
+	}
+	.wptb-slider .btn-two {
+		font-size: 13px;
+		min-width: 200px;
+	}
+}
+
+/* ========== Home Three (style3) Slider – responsive across all devices ========== */
+.wptb-slider.style3 {
+	overflow: visible;
+	position: relative;
+	min-height: 320px;
+}
+.wptb-slider.style3 .wptb-slider--item {
+	padding-top: 100px;
+	overflow: visible;
+	position: relative;
+	min-height: 320px;
+}
+.wptb-slider.style3 .wptb-slider--item .wptb-slider--image {
+	z-index: 0;
+	min-height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+.wptb-slider.style3 .wptb-slider--item .container {
+	z-index: 2;
+}
+/* Car block: visible on all devices, above background */
+.wptb-slider.style3 .wptb-slider--item .wptb-image-single {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	pointer-events: none;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+.wptb-slider.style3 .wptb-slider--item .wptb-image-single .wptb-item--image {
+	text-align: center;
+	position: relative;
+}
+.wptb-slider.style3 .wptb-slider--item .wptb-image-single .wptb-item--image img:first-child {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+.wptb-slider.style3 .wptb-slider--item .wptb-image-single img.car-light {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	right: 0;
+	bottom: 120px;
+	z-index: 2;
+	animation: wptb_opacity infinite ease-in-out 2s;
+}
+
+@keyframes wptb_opacity {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/* ----- Mobile first (default: small phones) ----- */
+.wptb-slider.style3 .wptb-heading .wptb-item--subtitle {
+	font-size: 14px;
+	line-height: 1.3;
+	margin-bottom: 12px;
+}
+.wptb-slider.style3 .wptb-heading .wptb-item--title {
+	font-size: 28px;
+	line-height: 1.2;
+	margin-bottom: 24px;
+}
+.wptb-slider.style3 .wptb-heading .wptb-item--title.hero-title-fixed-break .hero-title-line {
+	display: block;
+}
+.wptb-slider.style3 .wptb-heading .wptb-item--title.hero-title-fixed-break .hero-typed-slot {
+	display: inline-block;
+	position: relative;
+}
+.wptb-slider.style3 .wptb-heading .wptb-item--title.hero-title-fixed-break .hero-typed-placeholder {
+	visibility: hidden;
+	white-space: nowrap;
+}
+.wptb-slider.style3 .wptb-heading .wptb-item--title.hero-title-fixed-break .hero-typed-word {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	vertical-align: baseline;
+	white-space: nowrap;
+	color: #ff5100;
+}
+.wptb-slider.style3 .wptb-heading .wptb-item--subtitle .text-one {
+	color: #ff5100;
+}
+
+/* ----- Small devices (e.g. 480px+) ----- */
+@media screen and (min-width: 480px) {
+	.wptb-slider.style3 .wptb-heading .wptb-item--subtitle { font-size: 16px; margin-bottom: 16px; }
+	.wptb-slider.style3 .wptb-heading .wptb-item--title { font-size: 32px; margin-bottom: 28px; }
+}
+
+/* ----- Tablets (768px+ up to <992px) – strict scaling from laptop (1366x768 → 768x1024) ----- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	/* Tablet view:
+	   SCALE FROM LAPTOP DESKTOP VALUES TO KEEP THE SAME COMPOSITION.
+	   Laptop baseline (≥1200px):
+	     min-height: 640px, car bottom: -320px, car height: 830px,
+	     light height: 390px, light bottom: 120px.
+	   Width scale factor (tablet 768 / laptop 1366 ≈ 0.56) is applied. */
+	.wptb-slider.style3 .wptb-slider--item {
+		padding-top: 70px;        /* keep same top space under heading */
+		padding-bottom: 230px;    /* a bit more bottom room so overlap matches laptop */
+		min-height: 480px;        /* slightly taller for better proportion */
+	}
+	.wptb-slider.style3 .wptb-heading .wptb-item--subtitle {
+		font-size: 18px;
+		margin-bottom: 23px;
+	}
+	.wptb-slider.style3 .wptb-heading .wptb-item--title {
+		font-size: 42px;          /* between phone and laptop */
+		line-height: 1.2;
+		margin-bottom: 50px;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -220px;           /* move car a bit lower to reduce visible gap */
+		margin-top: 0;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img:first-child {
+		height: 520px;            /* slightly larger car on tablet */
+		width: auto;
+		max-width: 100%;
+		object-fit: contain;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img.car-light {
+		height: 270px;            /* slightly larger light for new car size */
+		width: auto;
+		max-width: 80%;
+		bottom: 40px;             /* align blink exactly with headlight position */
+	}
+	/* Slight overall scale-up so car visibly larger even when constrained by width */
+	/* NOTE:
+	   On tablet widths the previous transform: scale(1.18) was causing the
+	   car block to become wider than the viewport, which introduced a
+	   horizontal scroll / extra gap on the right side. We keep the same
+	   centering but avoid scaling so the layout stays within the viewport. */
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single .wptb-item--image {
+		transform: none;
+		transform-origin: center bottom;
+	}
+}
+
+/* ----- Desktop (992px+) ----- */
+@media screen and (min-width: 992px) {
+	.wptb-slider.style3 .wptb-heading .wptb-item--title { font-size: 52px; margin-bottom: 44px; }
+	.wptb-slider.style3 .wptb-heading .wptb-item--title.hero-title-fixed-break {
+		font-size: 46px;
+		line-height: 1.18;
+	}
+	.wptb-slider.style3 .wptb-heading .wptb-item--title.hero-title-fixed-break .hero-title-line {
+		white-space: nowrap;
+	}
+}
+
+/* ----- Large desktop (1200px+) ----- */
+@media screen and (min-width: 1200px) {
+	.wptb-slider.style3 .wptb-slider--item {
+		min-height: 640px;
+	}
+	.wptb-slider.style3 .wptb-heading .wptb-item--subtitle { font-size: 20px; margin-bottom: 23px; }
+	.wptb-slider.style3 .wptb-heading .wptb-item--title { font-size: 60px; line-height: 1.15; margin-bottom: 50px; }
+	.wptb-slider.style3 .wptb-heading .wptb-item--title.hero-title-fixed-break { font-size: 54px; }
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single {
+		bottom: -320px;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img:first-child {
+		height: 830px;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img.car-light {
+		height: 390px;
+		bottom: 120px;
+	}
+}
+
+/* ----- Extra-large desktop (1600px+) – scale from 1366x768 laptop to 1920x1080 desktop ----- */
+@media screen and (min-width: 1600px) {
+	/* Height scale factor ≈ 1080 / 768 ≈ 1.4.
+	   We scale key vertical values used at ≥1200px by this factor
+	   so the composition on 1920×1080 matches the 1366×768 laptop. */
+	.wptb-slider.style3 .wptb-slider--item {
+		padding-top: 140px;       /* 100px × 1.4 ≈ 140 */
+		min-height: 900px;        /* 640px × 1.4 ≈ 900 */
+	}
+	.wptb-slider.style3 .wptb-heading .wptb-item--title {
+		font-size: 72px;          /* slightly up from 60px for better balance */
+		line-height: 1.15;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single {
+		bottom: -450px;           /* -320px × 1.4 ≈ -450 */
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img:first-child {
+		height: 1160px;           /* 830px × 1.4 ≈ 1160 */
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img.car-light {
+		height: 540px;            /* 390px × 1.4 ≈ 546, rounded */
+		bottom: 170px;            /* 120px × 1.4 ≈ 168, rounded */
+	}
+}
+
+/* ----- Mobile / standard phones – align composition closely with tablet view ----- */
+@media screen and (max-width: 767px) {
+	/* Keep slider height controlled but allow car to overlap background very
+	   similarly to tablet, just scaled down for smaller width. */
+	.wptb-slider.style3 {
+		min-height: 460px !important;
+	}
+	.wptb-slider.style3 .wptb-slider--item {
+		padding-top: 64px !important;       /* tighten gap above car (more) */
+		padding-bottom: 180px !important;   /* reduce extra space under car (more) */
+		min-height: 460px !important;
+	}
+	/* Use tablet typography on mobile for this hero so heading block visually
+	   matches tablet view (same hierarchy and spacing). */
+	.wptb-slider.style3 .wptb-heading .wptb-item--subtitle {
+		font-size: 18px !important;
+		line-height: 1.3 !important;
+		margin-bottom: 23px !important;
+	}
+	.wptb-slider.style3 .wptb-heading .wptb-item--title {
+		font-size: 42px !important;
+		line-height: 1.2 !important;
+		margin-bottom: 22px !important;    /* reduce gap between title and car (more) */
+	}
+	/* Car block pinned near bottom like tablet, centered with no horizontal overflow. */
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single {
+		position: absolute !important;
+		left: 0 !important;
+		right: 0 !important;
+		bottom: -165px !important;          /* lift car slightly to cut bottom gap (more) */
+		margin-top: 0 !important;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img:first-child {
+		height: 410px !important;
+		width: auto !important;
+		max-width: 100% !important;
+		object-fit: contain !important;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img.car-light {
+		height: 240px !important;
+		width: auto !important;
+		max-width: 80% !important;
+		bottom: 32px !important;            /* align glow closer to reference */
+	}
+}
+
+/* Extra spacing for Vehicles section when slider car overlaps (tablet only) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.vehicles-section {
+		padding-top: 180px; /* further reduce gap between car and fleet header */
+	}
+}
+
+/* Extra spacing for Vehicles section when slider car overlaps (mobile) */
+@media screen and (max-width: 767px) {
+	.vehicles-section {
+		padding-top: 115px !important;  /* reduce gap between car and header */
+	}
+}
+
+/* ----- Small phones (≤390px width) – slightly tighter vertical spacing ----- */
+@media screen and (max-width: 479px) {
+	.vehicles-section {
+		padding-top: 105px !important;     /* reduce gap further on small phones */
+	}
+	.wptb-slider.style3 .wptb-slider--item {
+		padding-top: 64px !important;
+		padding-bottom: 165px !important;  /* less space under car */
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single {
+		bottom: -155px !important;         /* position car higher */
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img:first-child {
+		height: 372px !important;
+	}
+	.wptb-slider.style3 .wptb-slider--item .wptb-image-single img.car-light {
+		height: 210px !important;
+		bottom: 34px !important;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.wptb-slider.style3 {
+		padding-bottom: 0;
+	}
+}
+
+/* Container padding on very small screens */
+@media screen and (max-width: 575px) {
+	.wptb-slider.style3 .container {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+/* Optional: fadeInUp for wptb-image-single (if no WOW.js) */
+.wptb-slider .wow.fadeInUp {
+	animation: fadeInUp 0.8s ease forwards;
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

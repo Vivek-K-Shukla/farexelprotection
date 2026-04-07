@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links Of CSS File -->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/flaticon_rentq.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/scrollCue.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon -->
+		<link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+        <!-- Title -->
+        <title>RentQ - Tailwind Car Rental HTML Template</title>
+
+        <!-- Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="min-h-screen flex flex-col">
+
+        <!-- Preloader -->
+        <div
+            id="preloader"
+            class="fixed inset-0 z-[999] bg-white dark:bg-dark text-center flex items-center justify-center gap-[18px]"
+        >
+            <div class="wheel-loader w-[40px] h-[40px] rounded-full border-[5px] border-black/10 dark:border-white/10 !border-t-primary animate-spin"></div>
+            <span class="inline-flex h-[40px] max-h-[40px] items-center shrink-0">
+                <img src="assets/images/logo_six.png" class="dark:!hidden h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+                <img src="assets/images/logo_six.png" class="!hidden dark:!inline h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+            </span>
+        </div>
+        <!-- End Preloader -->
+        
+        <!-- Top Header -->
+        <div class="bg-primary text-white py-[13px]">
+            <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-[8px] md:gap-[10px] lg:gap-[25px]">
+                    <div class="flex flex-wrap justify-center lg:justify-start items-center gap-[8px] md:gap-[15px] xl:gap-[25px] font-medium">
+                        <a href="/cdn-cgi/l/email-protection#e28a878e8e8d95a290878c9693cc818d8f" class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px] hover:text-white/80">
+                            <i class="ri-mail-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            <span class="__cf_email__" data-cfemail="fa929f9696958dba889f948e8bd4999597">[email&#160;protected]</span>
+                        </a>
+                        <span class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-time-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            Mon - Fri: 9:00 AM - 8:00 PM
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap justify-center lg:justify-end items-center gap-[8px] md:gap-[15px] xl:gap-[25px] font-medium">
+                        <a
+                            href="tel:+1855-5079484"
+                            class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px] hover:text-white/80"
+                        >
+                            <i class="ri-phone-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            +1 855-507-9484
+                        </a>
+                        <div class="relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-global-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            Lang:
+                            <select class="appearance-none cursor-pointer outline-0" name="lang" id="lang">
+                                <option selected value="en">
+                                    EN
+                                </option>
+                                <option value="fr">
+                                    FR
+                                </option>
+                                <option value="es">
+                                    ES
+                                </option>
+                                <option value="de">
+                                    DE
+                                </option>
+                                <option value="pt">
+                                    PT
+                                </option>
+                            </select>
+                        </div>
+                        <div class="flex items-center gap-[7px] md:gap-[10px] relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-user-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            <a
+                                href="login.html"
+                                class="hover:text-white/80"
+                            >
+                                Login
+                            </a>
+                            <div class="w-px h-[12px] md:h-[15px] bg-white/30"></div>
+                            <a
+                                href="register.html"
+                                class="hover:text-white/80"
+                            >
+                                Register
+                            </a>
+                        </div>
+                        <button
+                            type="button"
+                            id="lightDarkToggle"
+                            class="inline-block leading-none"
+                        >
+                            <i class="ri-sun-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Top Header -->
+
+        <!-- Header -->
+        <header
+            class="bg-[#FFF2E8] dark:bg-black relative z-[9] py-[15px]"
+            id="navbar"
+        >
+            <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                <div class="relative flex items-center flex-wrap lg:flex-nowrap justify-between lg:justify-start">
+                    <a
+                        href="index.html"
+                        class="flex-none inline-block"
+                    >
+                        <img src="assets/images/logo.svg" class="dark:!hidden" alt="logo">
+                        <img src="assets/images/white-logo.svg" class="!hidden dark:!inline" alt="white-logo">
+                    </a>
+                    <div class="flex-none lg:hidden">
+                        <button
+                            type="button"
+                            class="navbar-burger-toggle inline-block leading-none"
+                        >
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                        </button>
+                    </div>
+                    <div class="hidden lg:flex items-center grow basis-full basis-auto gap-[25px] xl:gap-[40px]">
+                        <ul class="navbar-nav flex items-center flex-row gap-[25px] xl:gap-[30px] mx-auto">
+                            <li class="nav-item relative">
+                                <a
+                                    href="index.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="vehicles.html"
+                                    class="nav-link active relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Services
+                                </a>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="about.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="drivers.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Team
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="testimonials.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Testimonials
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="faq.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            FAQs
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Portfolio
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="shop.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Photos
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="shop.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Videos
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Grid
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-details.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="contact.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex items-center gap-[10px]">
+                            <div class="relative">
+                                <button
+                                    type="button"
+                                    id="searchBtn"
+                                    class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-2xl relative text-black dark:text-white hover:text-primary"
+                                >
+                                    <i class="ri-search-line"></i>
+                                </button>
+                                <div
+                                    id="searchBox"
+                                    class="absolute mt-[10px] top-full ltr:right-0 rtl:left-0 w-[380px] xl:w-[420px] bg-white dark:bg-black p-[20px] md:p-[25px] lg:p-[30px] invisible opacity-0 transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none"
+                                >
+                                    <form
+                                        action="#"
+                                        class="relative"
+                                    >
+                                        <input type="text" class="form-input dark:!bg-dark" placeholder="Search for anything" name="search" id="searchInput2">
+                                        <button
+                                            class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-2xl leading-none text-black dark:text-white hover:text-primary"
+                                            type="submit"
+                                        >
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <a
+                                href="cart.html"
+                                class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-2xl relative text-black dark:text-white hover:text-primary"
+                            >
+                                <i class="ri-shopping-cart-line"></i>
+                                <span class="flex items-center justify-center rounded-full bg-primary text-white w-[18px] h-[18px] text-xs font-medium absolute top-0 ltr:right-0 rtl:left-0">
+                                    0
+                                </span>
+                            </a>
+                            <button
+                                type="button"
+                                class="navbar-burger-toggle ltr:ml-[10px] rtl:mr-[10px] ltr:xl:ml-[20px] rtl:xl:mr-[20px] inline-block leading-none text-2xl transition-all duration-300 ease-in-out text-black dark:text-white hover:text-primary"
+                            >
+                                <i class="ri-menu-3-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header -->
+        
+        <!-- Sidebar Modal -->
+        <div class="sidebar-modal">
+            <div class="sidebar-modal-header">
+                <a
+                    href="index.html"
+                    class="flex-none inline-block"
+                >
+                    <img src="assets/images/logo.svg" class="dark:!hidden" alt="logo">
+                    <img src="assets/images/white-logo.svg" class="!hidden dark:!inline" alt="white-logo">
+                </a>
+                <button
+                    type="button"
+                    class="inline-block text-2xl leading-none text-black dark:text-white hover:text-primary"
+                >
+                    <i class="flaticon-close"></i>
+                </button>
+            </div>
+            <div class="sidebar-modal-body scrollbar">
+                <p class="font-bold text-black dark:text-white text-xl md:text-2xl lg:text-3xl !leading-[1.2]">
+                    Premium car rentals with transparent pricing and exceptional service.
+                </p>
+                <ul class="sidebar-navbar-nav mt-[20px] md:mt-[30px] lg:mt-[40px] lg:hidden">
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="index.html"
+                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="vehicles.html"
+                            class="nav-link active relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="about.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="drivers.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Team
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="testimonials.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="faq.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    FAQs
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="shop.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Photos
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="shop.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Videos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-grid.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Grid
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-details.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Details
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="contact.html"
+                            class="nav-link relative font-medium block text-black dark:text-white hover:text-primary"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px] mt-[20px] md:mt-[30px] lg:mt-[40px]">
+                    Contact
+                </h3>
+                <ul class="text-base mb-[20px] md:mb-[30px] lg:mb-[40px]">
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Call:
+                        <a
+                            href="tel:+18558079484"
+                            class="font-bold md:text-lg lg:text-xl hover:text-primary"
+                        >
+                            +1 855 - 807 9484
+                        </a>
+                    </li>
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Email:
+                        <a href="/cdn-cgi/l/email-protection#0e666b6262614e7c6b607a7f206d6163" class="font-bold md:text-lg lg:text-xl text-primary hover:underline">
+                            <span class="__cf_email__" data-cfemail="6008050c0c0f2012050e14114e030f0d">[email&#160;protected]</span>
+                        </a>
+                    </li>
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Address:
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="font-semibold hover:text-primary"
+                        >
+                            123 Business Ave, Los Angeles, CA 90045
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px]">
+                    Social
+                </h3>
+                <ul>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-facebook-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-twitter-x-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Twitter/X
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-linkedin-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-instagram-line w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-modal-footer">
+                <a
+                    href="cart.html"
+                    class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-xl relative text-black dark:text-white hover:text-primary"
+                >
+                    <i class="ri-shopping-cart-line"></i>
+                    <span class="flex items-center justify-center rounded-full bg-primary text-white w-[18px] h-[18px] text-xs font-medium absolute top-0 ltr:right-0 rtl:left-0">
+                        0
+                    </span>
+                </a>
+                <form
+                    action="#"
+                    class="relative flex-1"
+                >
+                    <input type="text" class="form-input dark:!bg-dark" placeholder="Search for anything">
+                    <button
+                        class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-xl leading-none text-black dark:text-white hover:text-primary"
+                        type="submit"
+                    >
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="backdrop"></div>
+        <!-- End Sidebar Modal -->
+
+        <!-- Main -->
+        <main class="flex-1">
+            
+            <!-- Page Banner -->
+            <div
+                class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px] bg-cover bg-center bg-no-repeat relative z-[1] text-center"
+                style="background-image: url(assets/images/bg-images/bg-image9.jpg);"
+            >
+                <div class="container">
+                    <h2 class="mb-[8px] text-[34px] md:text-[44px] lg:text-[54px] xl:text-[64px] leading-[1.2] xl:max-w-[985px]">
+                        Our Services
+                    </h2>
+                    <ul class="flex flex-wrap items-center justify-center gap-[10px] md:gap-[15px]">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="font-medium text-primary hover:underline"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <span class="block w-px h-[15px] bg-black dark:bg-white ltr:rotate-[15deg] rtl:rotate-[-15deg] mt-px"></span>
+                        </li>
+                        <li>
+                            Our Services
+                        </li>
+                    </ul>
+                </div>
+                <div class="absolute inset-0 -z-[1] bg-dark/90 hidden dark:block"></div>
+            </div>
+            <!-- End Page Banner -->
+
+            <!-- Services -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
+                <div
+                    class="container"
+                    data-cues="slideInUp"
+                    data-group="servicesContent"
+                >
+                    <div class="text-center xl:max-w-[1090px] mx-auto mb-[30px] md:mb-[35px] lg:mb-[40px]">
+                        <span class="block font-bold text-primary mb-[10px]">
+                            Our Services
+                        </span>
+                        <h2 class="mb-0 text-xl md:text-2xl lg:text-3xl leading-[1.2]">
+                            Discover RentQ's comprehensive range of premium car rental services designed to meet all your transportation needs with flexibility, quality, and exceptional customer care.
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+                        <div class="group rounded-[15px] border border-[#D9D9D9] dark:border-white/10">
+                            <a href="service-details.html" class="block overflow-hidden rounded-[15px]">
+                                <img src="assets/images/services/service2.jpg" class="rounded-[15px] transition duration-500 ease-in-out group-hover:scale-110" alt="service-image">
+                            </a>
+                            <div class="p-[20px] md:p-[25px] lg:p-[30px]">
+                                <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    <a href="service-details.html" class="hover:text-primary">
+                                        Airport Rentals
+                                    </a>
+                                </h3>
+                                <p>
+                                    Seamless airport pickups and returns with free shuttle service to all terminals. Start your journey the moment you land.
+                                </p>
+                                <ul class="md:mt-[20px]">
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Free airport shuttle service
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        24/7 airport locations
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Express check-in available
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Flight tracking for delays
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Priority vehicle preparation
+                                    </li>
+                                </ul>
+                                <div class="flex items-center flex-wrap gap-[20px] md:gap-[25px] lg:gap-[30px] mt-[15px] md:mt-[20px] lg:mt-[25px]">
+                                    <a
+                                        href="service-details.html"
+                                        class="primary-btn"
+                                    >
+                                        <span>
+                                            Book Now
+                                        </span>
+                                        <i class="ri-calendar-2-line !bg-white !text-black dark:!bg-dark dark:!text-white"></i>
+                                    </a>
+                                    <a
+                                        href="service-details.html"
+                                        class="inline-block text-15 md:text-base lg:text-lg xl:text-xl font-medium text-black dark:text-white hover:text-primary"
+                                    >
+                                        See Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group rounded-[15px] border border-[#D9D9D9] dark:border-white/10">
+                            <a href="service-details.html" class="block overflow-hidden rounded-[15px]">
+                                <img src="assets/images/services/service3.jpg" class="rounded-[15px] transition duration-500 ease-in-out group-hover:scale-110" alt="service-image">
+                            </a>
+                            <div class="p-[20px] md:p-[25px] lg:p-[30px]">
+                                <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    <a href="service-details.html" class="hover:text-primary">
+                                        Business Travel
+                                    </a>
+                                </h3>
+                                <p>
+                                    Premium vehicles and corporate accounts with simplified billing, priority service, and business-friendly amenities.
+                                </p>
+                                <ul class="md:mt-[20px]">
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Corporate account management
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Simplified billing & reporting
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Priority vehicle selection
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Free additional drivers
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Dedicated business support
+                                    </li>
+                                </ul>
+                                <div class="flex items-center flex-wrap gap-[20px] md:gap-[25px] lg:gap-[30px] mt-[15px] md:mt-[20px] lg:mt-[25px]">
+                                    <a
+                                        href="service-details.html"
+                                        class="primary-btn"
+                                    >
+                                        <span>
+                                            Book Now
+                                        </span>
+                                        <i class="ri-calendar-2-line !bg-white !text-black dark:!bg-dark dark:!text-white"></i>
+                                    </a>
+                                    <a
+                                        href="service-details.html"
+                                        class="inline-block text-15 md:text-base lg:text-lg xl:text-xl font-medium text-black dark:text-white hover:text-primary"
+                                    >
+                                        See Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group rounded-[15px] border border-[#D9D9D9] dark:border-white/10">
+                            <a href="service-details.html" class="block overflow-hidden rounded-[15px]">
+                                <img src="assets/images/services/service4.jpg" class="rounded-[15px] transition duration-500 ease-in-out group-hover:scale-110" alt="service-image">
+                            </a>
+                            <div class="p-[20px] md:p-[25px] lg:p-[30px]">
+                                <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    <a href="service-details.html" class="hover:text-primary">
+                                        Long Term Leasing
+                                    </a>
+                                </h3>
+                                <p>
+                                    Extended rental solutions for relocations, projects, or temporary vehicle needs with significant monthly discounts.
+                                </p>
+                                <ul class="md:mt-[20px]">
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        30+ day rentals
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Significant monthly discounts
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Free maintenance included
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Flexible return options
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Vehicle exchange available
+                                    </li>
+                                </ul>
+                                <div class="flex items-center flex-wrap gap-[20px] md:gap-[25px] lg:gap-[30px] mt-[15px] md:mt-[20px] lg:mt-[25px]">
+                                    <a
+                                        href="service-details.html"
+                                        class="primary-btn"
+                                    >
+                                        <span>
+                                            Book Now
+                                        </span>
+                                        <i class="ri-calendar-2-line !bg-white !text-black dark:!bg-dark dark:!text-white"></i>
+                                    </a>
+                                    <a
+                                        href="service-details.html"
+                                        class="inline-block text-15 md:text-base lg:text-lg xl:text-xl font-medium text-black dark:text-white hover:text-primary"
+                                    >
+                                        See Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group rounded-[15px] border border-[#D9D9D9] dark:border-white/10">
+                            <a href="service-details.html" class="block overflow-hidden rounded-[15px]">
+                                <img src="assets/images/services/service5.jpg" class="rounded-[15px] transition duration-500 ease-in-out group-hover:scale-110" alt="service-image">
+                            </a>
+                            <div class="p-[20px] md:p-[25px] lg:p-[30px]">
+                                <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    <a href="service-details.html" class="hover:text-primary">
+                                        Luxury & Premium
+                                    </a>
+                                </h3>
+                                <p>
+                                    Experience exceptional comfort and style with our premium vehicle collection for special occasions and executive travel.
+                                </p>
+                                <ul class="md:mt-[20px]">
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Latest luxury models
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Premium insurance included
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Concierge service
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Priority pickup & return
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Special occasion packages
+                                    </li>
+                                </ul>
+                                <div class="flex items-center flex-wrap gap-[20px] md:gap-[25px] lg:gap-[30px] mt-[15px] md:mt-[20px] lg:mt-[25px]">
+                                    <a
+                                        href="service-details.html"
+                                        class="primary-btn"
+                                    >
+                                        <span>
+                                            Book Now
+                                        </span>
+                                        <i class="ri-calendar-2-line !bg-white !text-black dark:!bg-dark dark:!text-white"></i>
+                                    </a>
+                                    <a
+                                        href="service-details.html"
+                                        class="inline-block text-15 md:text-base lg:text-lg xl:text-xl font-medium text-black dark:text-white hover:text-primary"
+                                    >
+                                        See Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group rounded-[15px] border border-[#D9D9D9] dark:border-white/10">
+                            <a href="service-details.html" class="block overflow-hidden rounded-[15px]">
+                                <img src="assets/images/services/service6.jpg" class="rounded-[15px] transition duration-500 ease-in-out group-hover:scale-110" alt="service-image">
+                            </a>
+                            <div class="p-[20px] md:p-[25px] lg:p-[30px]">
+                                <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    <a href="service-details.html" class="hover:text-primary">
+                                        One-Way Rentals
+                                    </a>
+                                </h3>
+                                <p>
+                                    Flexible pickup and drop-off at different locations across our nationwide network. Perfect for relocations and road trips.
+                                </p>
+                                <ul class="md:mt-[20px]">
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Pick up and drop off at different locations
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Nationwide network
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        No return trip needed
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Competitive one-way fees
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Online route planner
+                                    </li>
+                                </ul>
+                                <div class="flex items-center flex-wrap gap-[20px] md:gap-[25px] lg:gap-[30px] mt-[15px] md:mt-[20px] lg:mt-[25px]">
+                                    <a
+                                        href="service-details.html"
+                                        class="primary-btn"
+                                    >
+                                        <span>
+                                            Book Now
+                                        </span>
+                                        <i class="ri-calendar-2-line !bg-white !text-black dark:!bg-dark dark:!text-white"></i>
+                                    </a>
+                                    <a
+                                        href="service-details.html"
+                                        class="inline-block text-15 md:text-base lg:text-lg xl:text-xl font-medium text-black dark:text-white hover:text-primary"
+                                    >
+                                        See Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group rounded-[15px] border border-[#D9D9D9] dark:border-white/10">
+                            <a href="service-details.html" class="block overflow-hidden rounded-[15px]">
+                                <img src="assets/images/services/service7.jpg" class="rounded-[15px] transition duration-500 ease-in-out group-hover:scale-110" alt="service-image">
+                            </a>
+                            <div class="p-[20px] md:p-[25px] lg:p-[30px]">
+                                <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    <a href="service-details.html" class="hover:text-primary">
+                                        Family Vacations
+                                    </a>
+                                </h3>
+                                <p>
+                                    Spacious vehicles and family-friendly amenities for comfortable and memorable road trips with your loved ones.
+                                </p>
+                                <ul class="md:mt-[20px]">
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Spacious SUVs and minivans
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Free child seats available
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Family trip planning assistance
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Entertainment system options
+                                    </li>
+                                    <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                        <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                        Cooler and storage solutions
+                                    </li>
+                                </ul>
+                                <div class="flex items-center flex-wrap gap-[20px] md:gap-[25px] lg:gap-[30px] mt-[15px] md:mt-[20px] lg:mt-[25px]">
+                                    <a
+                                        href="service-details.html"
+                                        class="primary-btn"
+                                    >
+                                        <span>
+                                            Book Now
+                                        </span>
+                                        <i class="ri-calendar-2-line !bg-white !text-black dark:!bg-dark dark:!text-white"></i>
+                                    </a>
+                                    <a
+                                        href="service-details.html"
+                                        class="inline-block text-15 md:text-base lg:text-lg xl:text-xl font-medium text-black dark:text-white hover:text-primary"
+                                    >
+                                        See Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Services -->
+
+            <!-- How RentQ Works -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px] bg-[#FFF1F1] dark:bg-black">
+                <div
+                    class="container"
+                    data-cues="slideInUp"
+                    data-group="howItWorksContent"
+                >
+                    <div class="text-center xl:max-w-[1090px] mx-auto mb-[30px] md:mb-[35px] lg:mb-[40px]">
+                        <span class="block font-bold text-primary mb-[10px]">
+                            How RentQ Works
+                        </span>
+                        <h2 class="mb-0 text-xl md:text-2xl lg:text-3xl leading-[1.2]">
+                            Getting a premium chauffeur service has never been easier. Follow these simple steps to book your luxury ride in minutes.
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[25px]">
+                        <div class="group">
+                            <div class="flex items-center mb-[20px] md:mb-[25px]">
+                                <div class="flex items-center justify-center text-5xl rounded-full bg-[#F5E3E7] dark:bg-dark w-[100px] h-[100px] pt-[5px] transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                                    <i class="flaticon-booking-online"></i>
+                                </div>
+                                <div class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-primary text-white font-bold text-base md:text-lg lg:text-xl ltr:-ml-[20px] rtl:-mr-[20px] transition-all duration-300 ease-in-out group-hover:bg-dark">
+                                    01
+                                </div>
+                            </div>
+                            <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Book Your Ride
+                            </h3>
+                            <p>
+                                Use our website, app, or call us to book your chauffeur service.
+                            </p>
+                            <ul class="md:mt-[20px]">
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Instant online booking
+                                </li>
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    24/7 availability
+                                </li>
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Multiple payment options
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <div class="flex items-center mb-[20px] md:mb-[25px]">
+                                <div class="flex items-center justify-center text-5xl rounded-full bg-[#F5E3E7] dark:bg-dark w-[100px] h-[100px] pt-[5px] transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                                    <i class="flaticon-insurance"></i>
+                                </div>
+                                <div class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-primary text-white font-bold text-base md:text-lg lg:text-xl ltr:-ml-[20px] rtl:-mr-[20px] transition-all duration-300 ease-in-out group-hover:bg-dark">
+                                    02
+                                </div>
+                            </div>
+                            <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Confirm & Relax
+                            </h3>
+                            <p>
+                                Receive immediate confirmation with all trip details.
+                            </p>
+                            <ul class="md:mt-[20px]">
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Email & SMS confirmation
+                                </li>
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Driver details provided
+                                </li>
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Real-time updates
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <div class="flex items-center mb-[20px] md:mb-[25px]">
+                                <div class="flex items-center justify-center text-5xl rounded-full bg-[#F5E3E7] dark:bg-dark w-[100px] h-[100px] pt-[5px] transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                                    <i class="flaticon-chauffeur"></i>
+                                </div>
+                                <div class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-primary text-white font-bold text-base md:text-lg lg:text-xl ltr:-ml-[20px] rtl:-mr-[20px] transition-all duration-300 ease-in-out group-hover:bg-dark">
+                                    03
+                                </div>
+                            </div>
+                            <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Meet Your Driver
+                            </h3>
+                            <p>
+                                Your professional chauffeur arrives at the scheduled time.
+                            </p>
+                            <ul class="md:mt-[20px]">
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Punctual arrival
+                                </li>
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Professional greeting
+                                </li>
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Luggage assistance
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <div class="flex items-center mb-[20px] md:mb-[25px]">
+                                <div class="flex items-center justify-center text-5xl rounded-full bg-[#F5E3E7] dark:bg-dark w-[100px] h-[100px] pt-[5px] transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white">
+                                    <i class="flaticon-dance"></i>
+                                </div>
+                                <div class="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-primary text-white font-bold text-base md:text-lg lg:text-xl ltr:-ml-[20px] rtl:-mr-[20px] transition-all duration-300 ease-in-out group-hover:bg-dark">
+                                    04
+                                </div>
+                            </div>
+                            <h3 class="mb-[10px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Enjoy the Journey
+                            </h3>
+                            <p>
+                                Sit back and relax in comfort and style while your destination.
+                            </p>
+                            <ul class="md:mt-[20px]">
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Safe, comfortable ride
+                                </li>
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Premium amenities
+                                </li>
+                                <li class="font-medium text-black dark:text-white relative ltr:pl-[27px] rtl:pr-[27px] mb-[10px] last:mb-0">
+                                    <i class="ri-check-double-line font-normal text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-xl"></i>
+                                    Seamless experience
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End How RentQ Works -->
+
+            <!-- Service Categories -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
+                <div class="container">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center"
+                        data-cues="slideInUp"
+                        data-group="serviceCategoriesContent"
+                    >
+                        <div class="text-center rounded-[15px] ltr:xl:pr-[25px] rtl:xl:pl-[25px]">
+                            <img src="assets/images/about.jpg" class="rounded-[15px]" alt="about-image">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-[20px] md:gap-[25px]">
+                            <div>
+                                <div class="flex items-center gap-[15px] mb-[12px] md:mb-[15px]">
+                                    <div class="flex flex-none items-center justify-center bg-primary text-white text-2xl w-[50px] h-[50px] rounded-[10px]">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                    <h3 class="mb-0 text-base md:text-lg lg:text-xl leading-[1.2]">
+                                        Daily Rentals
+                                    </h3>
+                                </div>
+                                <p>
+                                    Enjoy flexible daily rentals with professional drivers, perfect for city commutes, meetings, or personal travel.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-[15px] mb-[12px] md:mb-[15px]">
+                                    <div class="flex flex-none items-center justify-center bg-primary text-white text-2xl w-[50px] h-[50px] rounded-[10px]">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                    <h3 class="mb-0 text-base md:text-lg lg:text-xl leading-[1.2]">
+                                        Weekly Rentals
+                                    </h3>
+                                </div>
+                                <p>
+                                    Experience hassle-free travel with our convenient weekly rental plans, ideal for business trips or extended stays.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-[15px] mb-[12px] md:mb-[15px]">
+                                    <div class="flex flex-none items-center justify-center bg-primary text-white text-2xl w-[50px] h-[50px] rounded-[10px]">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                    <h3 class="mb-0 text-base md:text-lg lg:text-xl leading-[1.2]">
+                                        Weekend Getaways
+                                    </h3>
+                                </div>
+                                <p>
+                                    Make your weekends memorable with our chauffeur-driven cars, perfect for comfortable and stress-free getaways.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-[15px] mb-[12px] md:mb-[15px]">
+                                    <div class="flex flex-none items-center justify-center bg-primary text-white text-2xl w-[50px] h-[50px] rounded-[10px]">
+                                        <i class="ri-check-double-line"></i>
+                                    </div>
+                                    <h3 class="mb-0 text-base md:text-lg lg:text-xl leading-[1.2]">
+                                        Road Trips
+                                    </h3>
+                                </div>
+                                <p>
+                                    Enjoy unforgettable road trips with skilled drivers & comfortable vehicles, ensuring a smooth ride from start to finish.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Service Categories -->
+            
+            <!-- CTA -->
+            <div class="container">
+                <div
+                    class="px-[20px] md:px-[40px] lg:px-[60px] xl:px-[100px] pt-[140px] md:pt-[280px] lg:pt-[240px] pb-[40px] md:pb-[60px] lg:pb-[80px] xl:pb-[100px] rounded-[15px] bg-black text-white/70 bg-cover bg-center bg-no-repeat"
+                    style="background-image: url(assets/images/bg-images/bg-image6.jpg);"
+                    data-cue="slideInUp"
+                >
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[20px] md:gap-[25px] items-end">
+                        <div>
+                            <h2 class="!text-white mb-[10px] text-xl md:text-2xl lg:text-3xl leading-[1.2]">
+                                Ready for a stress-free journey?
+                            </h2>
+                            <p>
+                                Book your premium chauffeur service today.
+                            </p>
+                        </div>
+                        <div class="md:flex items-center lg:justify-end gap-[20px]">
+                            <a
+                                href="contact.html"
+                                class="primary-btn group"
+                            >
+                                <span>
+                                    Book Now
+                                </span>
+                                <i class="ri-calendar-2-line"></i>
+                            </a>
+                            <div class="mt-[15px] md:mt-0">
+                                <span class="block text-white mb-[5px]">
+                                    Call Now:
+                                </span>
+                                <a
+                                    href="tel:+1855-8079484"
+                                    class="inline-block font-bold text-white hover:text-primary text-base md:text-lg lg:text-xl leading-none"
+                                >
+                                    +1 855 - 807 9484
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End CTA -->
+            
+            <!-- Subscribe -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
+                <div class="container">
+                    <div
+                        class="text-center"
+                        data-cues="slideInUp"
+                        data-group="subscribeContent"
+                    >
+                        <img src="assets/images/car.png" class="mb-[15px] md:mb-[20px] lg:mb-[25px]" alt="car">
+                        <div class="flex items-center justify-center gap-[8px] mb-[12px] md:mb-[15px]">
+                            <div class="flex items-center justify-center gap-[2px] flex-none">
+                                <span class="block w-[20px] h-px bg-primary"></span>
+                                <span class="block h-[20px] w-px bg-primary"></span>
+                                <span class="block h-[30px] w-px bg-primary"></span>
+                            </div>
+                            <h2 class="mb-0 text-xl md:text-2xl lg:text-3xl leading-[1.2]">
+                                Stay Updated with RentQ Rental
+                            </h2>
+                            <div class="flex items-center justify-center gap-[2px] flex-none">
+                                <span class="block h-[30px] w-px bg-primary"></span>
+                                <span class="block h-[20px] w-px bg-primary"></span>
+                                <span class="block w-[20px] h-px bg-primary"></span>
+                            </div>
+                        </div>
+                        <p class="font-medium text-base md:text-lg xl:text-xl mx-auto lg:max-w-[780px] xl:max-w-[865px]">
+                            Subscribe to our newsletter for exclusive deals, travel tips, and the latest updates.
+                        </p>
+                        <form class="md:flex items-center justify-center gap-[15px] md:max-w-[650px] mx-auto md:mt-[20px] lg:mt-[25px] xl:mt-[30px]">
+                            <input
+                                type="email"
+                                class="form-input !bg-[#FBFBFB] dark:!bg-black !border-[#D9D9D9] dark:!border-white/15 rounded-[5px] md:!h-[54px]"
+                                placeholder="Enter your email address"
+                            >
+                            <button
+                                type="submit"
+                                class="primary-btn group flex-none mt-[15px] md:mt-0"
+                            >
+                                <span>
+                                    Subscribe
+                                </span>
+                                <i class="ri-send-plane-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End Subscribe -->
+            
+            <!-- Download Our App -->
+            <div class="py-[30px] md:py-[40px] lg:py-[50px] bg-primary text-white">
+                <div class="container">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[15px] md:gap-[20px] lg:gap-[25px]">
+                        <div class="xl:max-w-[535px]">
+                            <p>
+                                RentQ is a premium car rental service offering professional chauffeurs, reliable vehicles, and exceptional comfort for every journey.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center lg:justify-end gap-[15px]">
+                            <h3 class="!text-white mb-0 text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Download Our App
+                            </h3>
+                            <div class="flex flex-wrap items-center gap-[10px]">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="inline-block relative border border-white/30 bg-[#171E20] rounded-[5px] py-[10px] ltr:pr-[18px] rtl:pl-[18px] ltr:pl-[57px] rtl:pr-[57px] hover:border-white"
+                                >
+                                    <i class="ri-apple-fill text-white absolute top-1/2 -translate-y-1/2 ltr:left-[12px] rtl:right-[12px] text-4xl leading-none -mt-px"></i>
+                                    <span class="block text-[#d9d9d9] text-13 md:text-sm leading-none mb-[3px]">
+                                        Download on the
+                                    </span>
+                                    <span class="block font-bold text-white leading-none">
+                                        App Store
+                                    </span>
+                                </a>
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="inline-block relative border border-white/30 bg-[#171E20] rounded-[5px] py-[10px] ltr:pr-[18px] rtl:pl-[18px] ltr:pl-[57px] rtl:pr-[57px] hover:border-white"
+                                >
+                                    <i class="ri-google-play-fill text-white absolute top-1/2 -translate-y-1/2 ltr:left-[12px] rtl:right-[12px] text-4xl leading-none -mt-px"></i>
+                                    <span class="block text-[#d9d9d9] text-13 md:text-sm leading-none mb-[3px]">
+                                        Get it on
+                                    </span>
+                                    <span class="block font-bold text-white leading-none">
+                                        Google Play
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Download Our App -->
+            
+        </main>
+        <!-- End Main -->
+
+        <!-- Footer -->
+        <footer class="bg-black text-white/70 pt-[60px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px]">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
+                    <div class="lg:col-span-1">
+                        <a
+                            href="index.html"
+                            class="inline-block mb-[20px] md:mb-[25px] lg:mb-[30px]"
+                        >
+                            <img src="assets/images/white-logo.svg" alt="white-logo">
+                        </a>
+                        <p>
+                            Your trusted partner for self-drive car rentals. Experience the freedom of the open road with our premium fleet and exceptional service.
+                        </p>
+                        <div class="flex items-center gap-[10px] mt-[20px] lg:mt-[25px]">
+                            <a href="#" class="flex items-center justify-center text-white w-[35px] md:w-[40px] h-[35px] md:h-[40px] border border-[#292F31] rounded-full hover:bg-primary hover:border-primary" target="_blank">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="flex items-center justify-center text-white w-[35px] md:w-[40px] h-[35px] md:h-[40px] border border-[#292F31] rounded-full hover:bg-primary hover:border-primary" target="_blank">
+                                <i class="ri-twitter-x-fill"></i>
+                            </a>
+                            <a href="#" class="flex items-center justify-center text-white w-[35px] md:w-[40px] h-[35px] md:h-[40px] border border-[#292F31] rounded-full hover:bg-primary hover:border-primary" target="_blank">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="flex items-center justify-center text-white w-[35px] md:w-[40px] h-[35px] md:h-[40px] border border-[#292F31] rounded-full hover:bg-primary hover:border-primary" target="_blank">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-[25px] ltr:xl:pl-[100px] rtl:xl:pr-[100px]">
+                        <div>
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Company
+                            </h3>
+                            <ul>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="about.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        About us
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="pricing.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Pricing plan
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="locations.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Locations
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="blog-grid.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Our news
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="contact.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Contact us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Social
+                            </h3>
+                            <ul>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Twitter/X
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        LinkedIn
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        YouTube
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 ltr:lg:-ml-[15px] rtl:lg:-mr-[15px]">
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Contact
+                            </h3>
+                            <ul class="text-[#d9d9d9]">
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Call:
+                                    <a
+                                        href="tel:+18558079484"
+                                        class="font-bold md:text-lg lg:text-xl text-white hover:text-primary"
+                                    >
+                                        +1 855 - 807 9484
+                                    </a>
+                                </li>
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Email:
+                                    <a href="/cdn-cgi/l/email-protection#87efe2ebebe8c7f5e2e9f3f6a9e4e8ea" class="font-bold md:text-lg lg:text-xl text-primary hover:underline">
+                                        <span class="__cf_email__" data-cfemail="e58d8089898aa597808b9194cb868a88">[email&#160;protected]</span>
+                                    </a>
+                                </li>
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Address:
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="font-semibold text-white hover:text-primary"
+                                    >
+                                        123 Business Ave, Los Angeles, CA 90045
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-[60px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px]"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-[15px] md:gap-[25px] border-t border-[#292F31] py-[20px] md:py-[25px] lg:py-[30px]">
+                    <p class="text-white !mb-0">
+                        © RentQ. All Rights Reserved. Powered by <a href="https://envytheme.com/" class="text-primary font-semibold hover:underline" target="_blank">EnvyTheme</a>
+                    </p>
+                    <ul class="flex items-center gap-[15px] lg:gap-[20px] md:justify-end">
+                        <li>
+                            <a href="privacy-policy.html" class="text-white hover:text-primary">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <span class="block w-px h-[17px] bg-[#D9D9D9]/20"></span>
+                        </li>
+                        <li>
+                            <a href="terms-of-service.html" class="text-white hover:text-primary">
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Back To Top -->
+        <button
+            type="button"
+            id="backToTopBtn"
+        >
+            <i class="flaticon-up-arrow"></i>
+        </button>
+        <!-- End Back To Top -->
+
+        <!-- LTR/RTL Mode -->
+        <button
+            type="button"
+            id="ltrRtlToggle"
+        >
+            <i class="ri-translate"></i>
+        </button>
+        <!-- End LTR/RTL Mode -->
+
+        <!-- Links Of JS File -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/scrollCue.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>

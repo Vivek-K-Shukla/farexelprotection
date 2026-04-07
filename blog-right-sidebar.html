@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links Of CSS File -->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/flaticon_rentq.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/scrollCue.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon -->
+		<link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+        <!-- Title -->
+        <title>RentQ - Tailwind Car Rental HTML Template</title>
+
+        <!-- Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="min-h-screen flex flex-col">
+
+        <!-- Preloader -->
+        <div
+            id="preloader"
+            class="fixed inset-0 z-[999] bg-white dark:bg-dark text-center flex items-center justify-center gap-[18px]"
+        >
+            <div class="wheel-loader w-[40px] h-[40px] rounded-full border-[5px] border-black/10 dark:border-white/10 !border-t-primary animate-spin"></div>
+            <span class="inline-flex h-[40px] max-h-[40px] items-center shrink-0">
+                <img src="assets/images/logo_six.png" class="dark:!hidden h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+                <img src="assets/images/logo_six.png" class="!hidden dark:!inline h-full w-auto max-h-[40px] max-w-[200px] object-contain object-left" alt="logo">
+            </span>
+        </div>
+        <!-- End Preloader -->
+        
+        <!-- Top Header -->
+        <div class="bg-primary text-white py-[13px]">
+            <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-[8px] md:gap-[10px] lg:gap-[25px]">
+                    <div class="flex flex-wrap justify-center lg:justify-start items-center gap-[8px] md:gap-[15px] xl:gap-[25px] font-medium">
+                        <a href="/cdn-cgi/l/email-protection#fa929f9696958dba889f948e8bd4999597" class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px] hover:text-white/80">
+                            <i class="ri-mail-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            <span class="__cf_email__" data-cfemail="0b636e6767647c4b796e657f7a25686466">[email&#160;protected]</span>
+                        </a>
+                        <span class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-time-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            Mon - Fri: 9:00 AM - 8:00 PM
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap justify-center lg:justify-end items-center gap-[8px] md:gap-[15px] xl:gap-[25px] font-medium">
+                        <a
+                            href="tel:+1855-5079484"
+                            class="inline-block relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px] hover:text-white/80"
+                        >
+                            <i class="ri-phone-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            +1 855-507-9484
+                        </a>
+                        <div class="relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-global-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            Lang:
+                            <select class="appearance-none cursor-pointer outline-0" name="lang" id="lang">
+                                <option selected value="en">
+                                    EN
+                                </option>
+                                <option value="fr">
+                                    FR
+                                </option>
+                                <option value="es">
+                                    ES
+                                </option>
+                                <option value="de">
+                                    DE
+                                </option>
+                                <option value="pt">
+                                    PT
+                                </option>
+                            </select>
+                        </div>
+                        <div class="flex items-center gap-[7px] md:gap-[10px] relative ltr:pl-[20px] rtl:pr-[20px] ltr:md:pl-[23px] rtl:md:pr-[23px]">
+                            <i class="ri-user-line font-normal absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>
+                            <a
+                                href="login.html"
+                                class="hover:text-white/80"
+                            >
+                                Login
+                            </a>
+                            <div class="w-px h-[12px] md:h-[15px] bg-white/30"></div>
+                            <a
+                                href="register.html"
+                                class="hover:text-white/80"
+                            >
+                                Register
+                            </a>
+                        </div>
+                        <button
+                            type="button"
+                            id="lightDarkToggle"
+                            class="inline-block leading-none"
+                        >
+                            <i class="ri-sun-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Top Header -->
+
+        <!-- Header -->
+        <header
+            class="relative z-[9] py-[15px]"
+            id="navbar"
+        >
+            <div class="container lg:!max-w-full 2xl:!max-w-[1620px]">
+                <div class="relative flex items-center flex-wrap lg:flex-nowrap justify-between lg:justify-start">
+                    <a
+                        href="index.html"
+                        class="flex-none inline-block"
+                    >
+                        <img src="assets/images/logo.svg" class="dark:!hidden" alt="logo">
+                        <img src="assets/images/white-logo.svg" class="!hidden dark:!inline" alt="white-logo">
+                    </a>
+                    <div class="flex-none lg:hidden">
+                        <button
+                            type="button"
+                            class="navbar-burger-toggle inline-block leading-none"
+                        >
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white first:mt-0 last:mb-0"></span>
+                        </button>
+                    </div>
+                    <div class="hidden lg:flex items-center grow basis-full basis-auto gap-[25px] xl:gap-[40px]">
+                        <ul class="navbar-nav flex items-center flex-row gap-[25px] xl:gap-[30px] ltr:ml-auto rtl:mr-auto">
+                            <li class="nav-item relative">
+                                <a
+                                    href="index.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="vehicle-details.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Services
+                                </a>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="about.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="nav-link dropdown-toggle font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Drivers
+                                        </a>
+                                        <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="drivers.html"
+                                                    class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Drivers
+                                                </a>
+                                            </li>
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="driver-details.html"
+                                                    class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Driver Details
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="locations.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Locations
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="pricing.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Pricing Plan
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="nav-link dropdown-toggle font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Careers
+                                        </a>
+                                        <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="careers.html"
+                                                    class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Careers
+                                                </a>
+                                            </li>
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="career-details.html"
+                                                    class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Career Details
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="testimonials.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Testimonials
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="faq.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            FAQ
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="nav-link dropdown-toggle font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            My Account
+                                        </a>
+                                        <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="login.html"
+                                                    class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Login
+                                                </a>
+                                            </li>
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="register.html"
+                                                    class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Register
+                                                </a>
+                                            </li>
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="forgot-password.html"
+                                                    class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Forgot Password
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="privacy-policy.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="terms-of-service.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Terms of Service
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="error.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            404 Error Page
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="nav-link dropdown-toggle font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Example Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Dropdown Item 1
+                                                </a>
+                                            </li>
+                                            <li class="nav-item relative mb-[17px] last:mb-0">
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="nav-link dropdown-toggle font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                >
+                                                    Dropdown Item 2
+                                                </a>
+                                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                        >
+                                                            Item 1
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                                        >
+                                                            Item 2
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="services.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Services
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="service-details.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Service Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Shop
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="shop.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Shop
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="cart.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Cart
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="checkout.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Checkout
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="product-details.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Product Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle active relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog
+                                </a>
+                                <ul class="dropdown-menu absolute min-w-[270px] xl:min-w-[290px] bg-white dark:bg-black py-[25px] transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none">
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Grid
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-right-sidebar.html"
+                                            class="nav-link active font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Right Sidebar
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-left-sidebar.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Left Sidebar
+                                        </a>
+                                    </li>
+                                    <li class="nav-item relative mb-[17px] last:mb-0">
+                                        <a
+                                            href="blog-details.html"
+                                            class="nav-link font-medium relative text-black dark:text-white px-[25px] block hover:text-primary"
+                                        >
+                                            Blog Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item relative">
+                                <a
+                                    href="contact.html"
+                                    class="nav-link relative font-medium py-[25px] block text-black dark:text-white hover:text-primary"
+                                >
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex items-center gap-[10px]">
+                            <div class="relative">
+                                <button
+                                    type="button"
+                                    id="searchBtn"
+                                    class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-2xl relative text-black dark:text-white hover:text-primary"
+                                >
+                                    <i class="ri-search-line"></i>
+                                </button>
+                                <div
+                                    id="searchBox"
+                                    class="absolute mt-[10px] top-full ltr:right-0 rtl:left-0 w-[380px] xl:w-[420px] bg-white dark:bg-black p-[20px] md:p-[25px] lg:p-[30px] invisible opacity-0 transition-all duration-300 ease-in-out shadow-[0_8px_24px_rgba(149,157,165,0.2)] dark:shadow-none"
+                                >
+                                    <form
+                                        action="#"
+                                        class="relative"
+                                    >
+                                        <input type="text" class="form-input dark:!bg-dark" placeholder="Search for anything" name="search" id="searchInput">
+                                        <button
+                                            class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-2xl leading-none text-black dark:text-white hover:text-primary"
+                                            type="submit"
+                                        >
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <a
+                                href="cart.html"
+                                class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-2xl relative text-black dark:text-white hover:text-primary"
+                            >
+                                <i class="ri-shopping-cart-line"></i>
+                                <span class="flex items-center justify-center rounded-full bg-primary text-white w-[18px] h-[18px] text-xs font-medium absolute top-0 ltr:right-0 rtl:left-0">
+                                    0
+                                </span>
+                            </a>
+                            <button
+                                type="button"
+                                class="navbar-burger-toggle ltr:ml-[10px] rtl:mr-[10px] ltr:xl:ml-[20px] rtl:xl:mr-[20px] inline-block leading-none text-2xl transition-all duration-300 ease-in-out text-black dark:text-white hover:text-primary"
+                            >
+                                <i class="ri-menu-3-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header -->
+        
+        <!-- Sidebar Modal -->
+        <div class="sidebar-modal">
+            <div class="sidebar-modal-header">
+                <a
+                    href="index.html"
+                    class="flex-none inline-block"
+                >
+                    <img src="assets/images/logo.svg" class="dark:!hidden" alt="logo">
+                    <img src="assets/images/white-logo.svg" class="!hidden dark:!inline" alt="white-logo">
+                </a>
+                <button
+                    type="button"
+                    class="inline-block text-2xl leading-none text-black dark:text-white hover:text-primary"
+                >
+                    <i class="flaticon-close"></i>
+                </button>
+            </div>
+            <div class="sidebar-modal-body scrollbar">
+                <p class="font-bold text-black dark:text-white text-xl md:text-2xl lg:text-3xl !leading-[1.2]">
+                    Premium car rentals with transparent pricing and exceptional service.
+                </p>
+                <ul class="sidebar-navbar-nav mt-[20px] md:mt-[30px] lg:mt-[40px] lg:hidden">
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Home
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="index.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Car Rental Home
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="index-2.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Vehicle Booking Home
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="index-3.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Drive & Go Home
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="index-4.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Auto Rental Home
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="dashboard.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Dashboard Home
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Vehicles
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="vehicles.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Vehicles
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="vehicle-details.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Vehicle Details
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="about.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Drivers
+                                </a>
+                                <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="drivers.html"
+                                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Drivers
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="driver-details.html"
+                                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Driver Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="locations.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Locations
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="pricing.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Pricing Plan
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Careers
+                                </a>
+                                <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="careers.html"
+                                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="career-details.html"
+                                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Career Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="testimonials.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="faq.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    My Account
+                                </a>
+                                <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="login.html"
+                                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="register.html"
+                                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Register
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="forgot-password.html"
+                                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Forgot Password
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="privacy-policy.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="terms-of-service.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Terms of Service
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="error.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    404 Error Page
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="javascript:void(0);"
+                                    class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Example Dropdown
+                                </a>
+                                <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Dropdown Item 1
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                        <a
+                                            href="javascript:void(0);"
+                                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                        >
+                                            Dropdown Item 2
+                                        </a>
+                                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                                >
+                                                    Item 1
+                                                </a>
+                                            </li>
+                                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                                >
+                                                    Item 2
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Services
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="services.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Services
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="service-details.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Service Details
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="shop.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Shop
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="cart.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Cart
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="checkout.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Checkout
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="product-details.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Product Details
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="javascript:void(0);"
+                            class="nav-link dropdown-toggle active relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                        >
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu hidden mt-[15px] py-[10px] ltr:border-l rtl:border-r border-black/5 dark:border-white/5">
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-grid.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Grid
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-right-sidebar.html"
+                                    class="nav-link active relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Right Sidebar
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-left-sidebar.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Left Sidebar
+                                </a>
+                            </li>
+                            <li class="nav-item px-[20px] mb-[15px] last:mb-0">
+                                <a
+                                    href="blog-details.html"
+                                    class="nav-link relative font-medium block text-base text-black dark:text-white hover:text-primary"
+                                >
+                                    Blog Details
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mb-[15px] md:mb-[20px] last:mb-0">
+                        <a
+                            href="contact.html"
+                            class="nav-link relative font-medium block text-black dark:text-white hover:text-primary"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px] mt-[20px] md:mt-[30px] lg:mt-[40px]">
+                    Contact
+                </h3>
+                <ul class="text-base mb-[20px] md:mb-[30px] lg:mb-[40px]">
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Call:
+                        <a
+                            href="tel:+18558079484"
+                            class="font-bold md:text-lg lg:text-xl hover:text-primary"
+                        >
+                            +1 855 - 807 9484
+                        </a>
+                    </li>
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Email:
+                        <a href="/cdn-cgi/l/email-protection#8be3eee7e7e4cbf9eee5fffaa5e8e4e6" class="font-bold md:text-lg lg:text-xl text-primary hover:underline">
+                            <span class="__cf_email__" data-cfemail="7018151c1c1f3002151e04015e131f1d">[email&#160;protected]</span>
+                        </a>
+                    </li>
+                    <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                        Address:
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="font-semibold hover:text-primary"
+                        >
+                            123 Business Ave, Los Angeles, CA 90045
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px]">
+                    Social
+                </h3>
+                <ul>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-facebook-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-twitter-x-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Twitter/X
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-linkedin-fill w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li class="mb-[7px] md:mb-[10px] last:mb-0">
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="group text-black dark:text-white flex items-center gap-[10px]"
+                        >
+                            <i class="ri-instagram-line w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#f4f4f4] dark:bg-dark text-black dark:text-white transition-all duration-300 ease-in-out group-hover:bg-primary group-hover:text-white"></i>
+                            Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-modal-footer">
+                <a
+                    href="cart.html"
+                    class="w-[50px] h-[50px] rounded-full text-center flex items-center justify-center border border-body/20 dark:border-white/20 text-xl relative text-black dark:text-white hover:text-primary"
+                >
+                    <i class="ri-shopping-cart-line"></i>
+                    <span class="flex items-center justify-center rounded-full bg-primary text-white w-[18px] h-[18px] text-xs font-medium absolute top-0 ltr:right-0 rtl:left-0">
+                        0
+                    </span>
+                </a>
+                <form
+                    action="#"
+                    class="relative flex-1"
+                >
+                    <input type="text" class="form-input dark:!bg-dark" placeholder="Search for anything">
+                    <button
+                        class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-xl leading-none text-black dark:text-white hover:text-primary"
+                        type="submit"
+                    >
+                        <i class="ri-search-line"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="backdrop"></div>
+        <!-- End Sidebar Modal -->
+
+        <!-- Main -->
+        <main class="flex-1">
+            
+            <!-- Page Banner -->
+            <div
+                class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px] bg-cover bg-center bg-no-repeat relative z-[1] text-center ltr:lg:text-left rtl:lg:text-right"
+                style="background-image: url(assets/images/bg-images/bg-image9.jpg);"
+            >
+                <div class="container">
+                    <h2 class="mb-[8px] text-[34px] md:text-[44px] lg:text-[54px] xl:text-[64px] leading-[1.2] xl:max-w-[985px]">
+                        Blog Right Sidebar
+                    </h2>
+                    <ul class="flex flex-wrap items-center justify-center lg:justify-start gap-[10px] md:gap-[15px]">
+                        <li>
+                            <a
+                                href="index.html"
+                                class="font-medium text-primary hover:underline"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <span class="block w-px h-[15px] bg-black dark:bg-white ltr:rotate-[15deg] rtl:rotate-[-15deg] mt-px"></span>
+                        </li>
+                        <li>
+                            Blog Right Sidebar
+                        </li>
+                    </ul>
+                    <div class="absolute bottom-0 ltr:right-0 rtl:left-0 bg-white dark:bg-dark ltr:rounded-tl-[15px] rtl:rounded-tr-[15px] py-[25px] px-[50px] hidden lg:block">
+                        <img
+                            src="assets/images/car.gif"
+                            class="ltr:-scale-x-100"
+                            data-cue="slideInUp"
+                            alt="car"
+                        >
+                    </div>
+                </div>
+                <div class="absolute inset-0 -z-[1] bg-dark/90 hidden dark:block"></div>
+            </div>
+            <!-- End Page Banner -->
+
+            <!-- Blog -->
+            <div class="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[120px]">
+                <div class="container">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] xl:gap-[50px]"
+                        data-cues="slideInUp"
+                        data-group="blogContent"
+                    >
+                        <div class="lg:col-span-2">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-x-[25px] gap-y-[30px] md:gap-y-[35px] lg:gap-y-[40px] xl:gap-y-[50px]">
+                                <div class="group border-b border-[#404040]/10 dark:border-white/10 pb-[20px] md:pb-[25px]">
+                                    <a href="blog-details.html" class="block overflow-hidden rounded-[15px] mb-[20px] md:mb-[25px]">
+                                        <img src="assets/images/blogs/blog4.jpg" class="rounded-[15px] transition-all duration-300 ease-in-out group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <div class="flex items-center mb-[15px] gap-[15px]">
+                                        <a href="blog-details.html" class="w-[50px] rounded-full flex-none">
+                                            <img src="assets/images/users/user1.jpg" class="rounded-full" alt="user-image">
+                                        </a>
+                                        <span class="block">
+                                            Written by <a href="blog-details.html" class="font-semibold hover:text-primary">admin</a>
+                                        </span>
+                                    </div>
+                                    <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px] md:mb-[15px]">
+                                        <a href="blog-details.html" class="hover:text-primary">
+                                            How to maintain your rental car for optimal performance
+                                        </a>
+                                    </h3>
+                                    <div class="flex flex-wrap items-center gap-[15px]">
+                                        <span class="block relative ltr:pl-[25px] rtl:pr-[25px]">
+                                            <i class="ri-calendar-event-line text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-[18px]"></i>
+                                            January 25, 2026
+                                        </span>
+                                        <span class="block relative ltr:pl-[25px] rtl:pr-[25px]">
+                                            <i class="ri-time-line text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-[18px]"></i>
+                                            8 min read
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="group border-b border-[#404040]/10 dark:border-white/10 pb-[20px] md:pb-[25px]">
+                                    <a href="blog-details.html" class="block overflow-hidden rounded-[15px] mb-[20px] md:mb-[25px]">
+                                        <img src="assets/images/blogs/blog5.jpg" class="rounded-[15px] transition-all duration-300 ease-in-out group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <div class="flex items-center mb-[15px] gap-[15px]">
+                                        <a href="blog-details.html" class="w-[50px] rounded-full flex-none">
+                                            <img src="assets/images/users/user2.jpg" class="rounded-full" alt="user-image">
+                                        </a>
+                                        <span class="block">
+                                            Written by <a href="blog-details.html" class="font-semibold hover:text-primary">admin</a>
+                                        </span>
+                                    </div>
+                                    <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px] md:mb-[15px]">
+                                        <a href="blog-details.html" class="hover:text-primary">
+                                            Traveling with kids making family road trips enjoyable
+                                        </a>
+                                    </h3>
+                                    <div class="flex flex-wrap items-center gap-[15px]">
+                                        <span class="block relative ltr:pl-[25px] rtl:pr-[25px]">
+                                            <i class="ri-calendar-event-line text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-[18px]"></i>
+                                            January 24, 2026
+                                        </span>
+                                        <span class="block relative ltr:pl-[25px] rtl:pr-[25px]">
+                                            <i class="ri-time-line text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-[18px]"></i>
+                                            5 min read
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="group border-b border-[#404040]/10 dark:border-white/10 pb-[20px] md:pb-[25px]">
+                                    <a href="blog-details.html" class="block overflow-hidden rounded-[15px] mb-[20px] md:mb-[25px]">
+                                        <img src="assets/images/blogs/blog6.jpg" class="rounded-[15px] transition-all duration-300 ease-in-out group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <div class="flex items-center mb-[15px] gap-[15px]">
+                                        <a href="blog-details.html" class="w-[50px] rounded-full flex-none">
+                                            <img src="assets/images/users/user3.jpg" class="rounded-full" alt="user-image">
+                                        </a>
+                                        <span class="block">
+                                            Written by <a href="blog-details.html" class="font-semibold hover:text-primary">admin</a>
+                                        </span>
+                                    </div>
+                                    <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px] md:mb-[15px]">
+                                        <a href="blog-details.html" class="hover:text-primary">
+                                            Top 10 essential road trip tips for your next adventure
+                                        </a>
+                                    </h3>
+                                    <div class="flex flex-wrap items-center gap-[15px]">
+                                        <span class="block relative ltr:pl-[25px] rtl:pr-[25px]">
+                                            <i class="ri-calendar-event-line text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-[18px]"></i>
+                                            January 23, 2026
+                                        </span>
+                                        <span class="block relative ltr:pl-[25px] rtl:pr-[25px]">
+                                            <i class="ri-time-line text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-[18px]"></i>
+                                            7 min read
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="group border-b border-[#404040]/10 dark:border-white/10 pb-[20px] md:pb-[25px]">
+                                    <a href="blog-details.html" class="block overflow-hidden rounded-[15px] mb-[20px] md:mb-[25px]">
+                                        <img src="assets/images/blogs/blog7.jpg" class="rounded-[15px] transition-all duration-300 ease-in-out group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <div class="flex items-center mb-[15px] gap-[15px]">
+                                        <a href="blog-details.html" class="w-[50px] rounded-full flex-none">
+                                            <img src="assets/images/users/user4.jpg" class="rounded-full" alt="user-image">
+                                        </a>
+                                        <span class="block">
+                                            Written by <a href="blog-details.html" class="font-semibold hover:text-primary">admin</a>
+                                        </span>
+                                    </div>
+                                    <h3 class="text-base md:text-lg lg:text-xl leading-[1.2] mb-[15px] md:mb-[15px]">
+                                        <a href="blog-details.html" class="hover:text-primary">
+                                            Why businesses prefer chauffeur-driven cars for corporate travel
+                                        </a>
+                                    </h3>
+                                    <div class="flex flex-wrap items-center gap-[15px]">
+                                        <span class="block relative ltr:pl-[25px] rtl:pr-[25px]">
+                                            <i class="ri-calendar-event-line text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-[18px]"></i>
+                                            January 22, 2026
+                                        </span>
+                                        <span class="block relative ltr:pl-[25px] rtl:pr-[25px]">
+                                            <i class="ri-time-line text-primary absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 text-[18px]"></i>
+                                            7 min read
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="text-center mt-[30px] md:mt-[35px] lg:mt-[40px]">
+                                <ul class="flex items-center flex-wrap justify-center gap-[5px] md:gap-[10px]">
+                                    <li>
+                                        <a href="javascript:void(0);" class="w-[40px] md:w-[45px] lg:w-[50px] h-[40px] md:h-[45px] lg:h-[50px] rounded-[5px] text-xl text-black dark:text-white bg-[#f4f4f4] dark:bg-black flex items-center justify-center transition-all duration-300 ease-in-out hover:bg-primary hover:text-white">
+                                            <i class="ri-arrow-left-line"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span class="font-medium w-[40px] md:w-[45px] lg:w-[50px] h-[40px] md:h-[45px] lg:h-[50px] rounded-[5px] text-base md:text-lg bg-primary text-white flex items-center justify-center">
+                                            1
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="font-medium w-[40px] md:w-[45px] lg:w-[50px] h-[40px] md:h-[45px] lg:h-[50px] rounded-[5px] text-base md:text-lg text-black dark:text-white bg-[#f4f4f4] dark:bg-black flex items-center justify-center transition-all duration-300 ease-in-out hover:bg-primary hover:text-white">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="font-medium w-[40px] md:w-[45px] lg:w-[50px] h-[40px] md:h-[45px] lg:h-[50px] rounded-[5px] text-base md:text-lg text-black dark:text-white bg-[#f4f4f4] dark:bg-black flex items-center justify-center transition-all duration-300 ease-in-out hover:bg-primary hover:text-white">
+                                            3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="w-[40px] md:w-[45px] lg:w-[50px] h-[40px] md:h-[45px] lg:h-[50px] rounded-[5px] text-xl text-black dark:text-white bg-[#f4f4f4] dark:bg-black flex items-center justify-center transition-all duration-300 ease-in-out hover:bg-primary hover:text-white">
+                                            <i class="ri-arrow-right-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="lg:col-span-1">
+                            <div class="bg-[#F4F4F4] dark:bg-black rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px] mb-[25px] last:mb-0">
+                                <h3 class="mb-[15px] md:mb-[20px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    Search
+                                </h3>
+                                <form action="#" class="relative">
+                                    <input
+                                        type="text"
+                                        name="search"
+                                        id="search"
+                                        placeholder="Search..."
+                                        class="form-input !bg-white dark:!bg-dark rounded-[5px] !border-[#d9d9d9] dark:!border-white/10"
+                                    />
+                                    <button type="submit" class="absolute top-1/2 -translate-y-1/2 ltr:right-[15px] rtl:left-[15px] ltr:md:right-[20px] rtl:md:left-[20px] text-xl leading-none text-black dark:text-white hover:text-primary">
+                                        <i class="ri-search-line"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="bg-[#F4F4F4] dark:bg-black rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px] mb-[25px] last:mb-0">
+                                <h3 class="mb-[15px] md:mb-[20px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    Categories
+                                </h3>
+                                <ul>
+                                    <li class="py-[10px] first:pt-0 border-b border-dashed border-[#D9D9D9] dark:border-white/10">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="flex items-center justify-between hover:text-primary"
+                                        >
+                                            Car Rental
+                                            <span>
+                                                12
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="py-[10px] first:pt-0 border-b border-dashed border-[#D9D9D9] dark:border-white/10">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="flex items-center justify-between hover:text-primary"
+                                        >
+                                            Car Care
+                                            <span>
+                                                8
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="py-[10px] first:pt-0 border-b border-dashed border-[#D9D9D9] dark:border-white/10">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="flex items-center justify-between hover:text-primary"
+                                        >
+                                            Travel Tips
+                                            <span>
+                                                15
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="py-[10px] first:pt-0 border-b border-dashed border-[#D9D9D9] dark:border-white/10">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="flex items-center justify-between hover:text-primary"
+                                        >
+                                            Destination Guides
+                                            <span>
+                                                6
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="py-[10px] first:pt-0 border-b border-dashed border-[#D9D9D9] dark:border-white/10">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="flex items-center justify-between hover:text-primary"
+                                        >
+                                            Savings Tips
+                                            <span>
+                                                5
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="py-[10px] first:pt-0 border-b border-dashed border-[#D9D9D9] dark:border-white/10">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="flex items-center justify-between hover:text-primary"
+                                        >
+                                            Family Travel
+                                            <span>
+                                                9
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="py-[10px] first:pt-0 border-b border-dashed border-[#D9D9D9] dark:border-white/10">
+                                        <a
+                                            href="blog-grid.html"
+                                            class="flex items-center justify-between hover:text-primary"
+                                        >
+                                            Business Travel
+                                            <span>
+                                                3
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bg-[#F4F4F4] dark:bg-black rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px] mb-[25px] last:mb-0">
+                                <h3 class="mb-[15px] md:mb-[20px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    Popular Posts
+                                </h3>
+                                <div class="group flex items-center gap-[15px] md:gap-[20px] mb-[15px] md:mb-[20px] last:mb-0">
+                                    <a href="blog-details.html" class="block rounded-[10px] overflow-hidden w-[100px] flex-none">
+                                        <img src="assets/images/blogs/blog1.jpg" class="rounded-[10px] transition-all duration-300 ease-in-out group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <div>
+                                        <h4 class="text-sm md:text-15px lg:text-base leading-[1.2] mb-[7px]">
+                                            <a href="blog-details.html" class="hover:text-primary">
+                                                Understanding rental car insurance
+                                            </a>
+                                        </h4>
+                                        <span class="block text-13 md:text-sm">
+                                            January 25, 2026
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="group flex items-center gap-[15px] md:gap-[20px] mb-[15px] md:mb-[20px] last:mb-0">
+                                    <a href="blog-details.html" class="block rounded-[10px] overflow-hidden w-[100px] flex-none">
+                                        <img src="assets/images/blogs/blog2.jpg" class="rounded-[10px] transition-all duration-300 ease-in-out group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <div>
+                                        <h4 class="text-sm md:text-15px lg:text-base leading-[1.2] mb-[7px]">
+                                            <a href="blog-details.html" class="hover:text-primary">
+                                                The ultimate packing checklist for road trips
+                                            </a>
+                                        </h4>
+                                        <span class="block text-13 md:text-sm">
+                                            January 24, 2026
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="group flex items-center gap-[15px] md:gap-[20px] mb-[15px] md:mb-[20px] last:mb-0">
+                                    <a href="blog-details.html" class="block rounded-[10px] overflow-hidden w-[100px] flex-none">
+                                        <img src="assets/images/blogs/blog3.jpg" class="rounded-[10px] transition-all duration-300 ease-in-out group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <div>
+                                        <h4 class="text-sm md:text-15px lg:text-base leading-[1.2] mb-[7px]">
+                                            <a href="blog-details.html" class="hover:text-primary">
+                                                Electric vehicles: what you need to know
+                                            </a>
+                                        </h4>
+                                        <span class="block text-13 md:text-sm">
+                                            January 23, 2026
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-[#F4F4F4] dark:bg-black rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px] mb-[25px] last:mb-0">
+                                <h3 class="mb-[15px] md:mb-[20px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    Tags
+                                </h3>
+                                <div class="flex flex-wrap gap-[7px]">
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Accessories
+                                    </a>
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Rental
+                                    </a>
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Electronics
+                                    </a>
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Fuel
+                                    </a>
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Travel
+                                    </a>
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Transport
+                                    </a>
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Cars
+                                    </a>
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Driver
+                                    </a>
+                                    <a href="blog-grid.html" class="inline-block py-[6px] px-[15px] bg-white dark:bg-dark rounded-[5px] text-13 md:text-sm lg:text-15 font-medium hover:bg-primary hover:text-white">
+                                        Road Trip
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bg-[#F4F4F4] dark:bg-black rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px] mb-[25px] last:mb-0">
+                                <h3 class="mb-[15px] md:mb-[20px] text-base md:text-lg lg:text-xl leading-[1.2]">
+                                    Gallery
+                                </h3>
+                                <div class="grid grid-cols-3 gap-[10px]">
+                                    <a
+                                        class="block rounded-[5px] overflow-hidden group"
+                                        href="assets/images/blogs/blog4.jpg"
+                                        data-fslightbox="gallery"
+                                    >
+                                        <img src="assets/images/blogs/blog4.jpg" class="rounded-[5px] transition-all ease-in-out duration-300 group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <a
+                                        class="block rounded-[5px] overflow-hidden group"
+                                        href="assets/images/blogs/blog5.jpg"
+                                        data-fslightbox="gallery"
+                                    >
+                                        <img src="assets/images/blogs/blog5.jpg" class="rounded-[5px] transition-all ease-in-out duration-300 group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <a
+                                        class="block rounded-[5px] overflow-hidden group"
+                                        href="assets/images/blogs/blog6.jpg"
+                                        data-fslightbox="gallery"
+                                    >
+                                        <img src="assets/images/blogs/blog6.jpg" class="rounded-[5px] transition-all ease-in-out duration-300 group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <a
+                                        class="block rounded-[5px] overflow-hidden group"
+                                        href="assets/images/blogs/blog7.jpg"
+                                        data-fslightbox="gallery"
+                                    >
+                                        <img src="assets/images/blogs/blog7.jpg" class="rounded-[5px] transition-all ease-in-out duration-300 group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <a
+                                        class="block rounded-[5px] overflow-hidden group"
+                                        href="assets/images/blogs/blog8.jpg"
+                                        data-fslightbox="gallery"
+                                    >
+                                        <img src="assets/images/blogs/blog8.jpg" class="rounded-[5px] transition-all ease-in-out duration-300 group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                    <a
+                                        class="block rounded-[5px] overflow-hidden group"
+                                        href="assets/images/blogs/blog9.jpg"
+                                        data-fslightbox="gallery"
+                                    >
+                                        <img src="assets/images/blogs/blog9.jpg" class="rounded-[5px] transition-all ease-in-out duration-300 group-hover:scale-110" alt="blog-image">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="relative rounded-[15px] mb-[25px] last:mb-0">
+                                <img src="assets/images/duster-car.jpg" class="rounded-[15px]" alt="duster-car-image">
+                                <h3 class="mb-0 !text-white text-xl md:text-2xl lg:text-3xl leading-[1.2] absolute top-0 left-0 right-0 p-[20px] md:p-[25px] lg:p-[30px]">
+                                    Need a Ride? Book Your Car Now.
+                                </h3>
+                                <a
+                                    href="contact.html"
+                                    class="primary-btn group absolute ltr:right-[20px] rtl:left-[20px] ltr:md:right-[25px] rtl:md:left-[25px] ltr:lg:right-[30px] rtl:lg:left-[30px] bottom-[20px] md:bottom-[25px] lg:bottom-[30px]"
+                                >
+                                    <span>
+                                        Book Now
+                                    </span>
+                                    <i class="ri-calendar-event-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Blog -->
+            
+            <!-- Download Our App -->
+            <div class="py-[30px] md:py-[40px] lg:py-[50px] bg-primary text-white">
+                <div class="container">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[15px] md:gap-[20px] lg:gap-[25px]">
+                        <div class="xl:max-w-[535px]">
+                            <p>
+                                RentQ is a premium car rental service offering professional chauffeurs, reliable vehicles, and exceptional comfort for every journey.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center lg:justify-end gap-[15px]">
+                            <h3 class="!text-white mb-0 text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Download Our App
+                            </h3>
+                            <div class="flex flex-wrap items-center gap-[10px]">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="inline-block relative border border-white/30 bg-[#171E20] rounded-[5px] py-[10px] ltr:pr-[18px] rtl:pl-[18px] ltr:pl-[57px] rtl:pr-[57px] hover:border-white"
+                                >
+                                    <i class="ri-apple-fill text-white absolute top-1/2 -translate-y-1/2 ltr:left-[12px] rtl:right-[12px] text-4xl leading-none -mt-px"></i>
+                                    <span class="block text-[#d9d9d9] text-13 md:text-sm leading-none mb-[3px]">
+                                        Download on the
+                                    </span>
+                                    <span class="block font-bold text-white leading-none">
+                                        App Store
+                                    </span>
+                                </a>
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="inline-block relative border border-white/30 bg-[#171E20] rounded-[5px] py-[10px] ltr:pr-[18px] rtl:pl-[18px] ltr:pl-[57px] rtl:pr-[57px] hover:border-white"
+                                >
+                                    <i class="ri-google-play-fill text-white absolute top-1/2 -translate-y-1/2 ltr:left-[12px] rtl:right-[12px] text-4xl leading-none -mt-px"></i>
+                                    <span class="block text-[#d9d9d9] text-13 md:text-sm leading-none mb-[3px]">
+                                        Get it on
+                                    </span>
+                                    <span class="block font-bold text-white leading-none">
+                                        Google Play
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Download Our App -->
+            
+        </main>
+        <!-- End Main -->
+
+        <!-- Footer -->
+        <footer class="bg-black text-white/70 pt-[60px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px]">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
+                    <div class="lg:col-span-1">
+                        <a
+                            href="index.html"
+                            class="inline-block mb-[20px] md:mb-[25px] lg:mb-[30px]"
+                        >
+                            <img src="assets/images/white-logo.svg" alt="white-logo">
+                        </a>
+                        <p>
+                            Your trusted partner for self-drive car rentals. Experience the freedom of the open road with our premium fleet and exceptional service.
+                        </p>
+                        <div class="flex items-center gap-[10px] mt-[20px] lg:mt-[25px]">
+                            <a href="#" class="flex items-center justify-center text-white w-[35px] md:w-[40px] h-[35px] md:h-[40px] border border-[#292F31] rounded-full hover:bg-primary hover:border-primary" target="_blank">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="flex items-center justify-center text-white w-[35px] md:w-[40px] h-[35px] md:h-[40px] border border-[#292F31] rounded-full hover:bg-primary hover:border-primary" target="_blank">
+                                <i class="ri-twitter-x-fill"></i>
+                            </a>
+                            <a href="#" class="flex items-center justify-center text-white w-[35px] md:w-[40px] h-[35px] md:h-[40px] border border-[#292F31] rounded-full hover:bg-primary hover:border-primary" target="_blank">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="flex items-center justify-center text-white w-[35px] md:w-[40px] h-[35px] md:h-[40px] border border-[#292F31] rounded-full hover:bg-primary hover:border-primary" target="_blank">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-[25px] ltr:xl:pl-[100px] rtl:xl:pr-[100px]">
+                        <div>
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Company
+                            </h3>
+                            <ul>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="about.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        About us
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="pricing.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Pricing plan
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="locations.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Locations
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="blog-grid.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Our news
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="contact.html"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Contact us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Social
+                            </h3>
+                            <ul>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Twitter/X
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        LinkedIn
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li class="mb-[8px] last:mb-0">
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="text-[#d9d9d9] hover:text-primary"
+                                    >
+                                        YouTube
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 ltr:lg:-ml-[15px] rtl:lg:-mr-[15px]">
+                            <h3 class="mb-[20px] lg:mb-[25px] !text-white text-base md:text-lg lg:text-xl leading-[1.2]">
+                                Contact
+                            </h3>
+                            <ul class="text-[#d9d9d9]">
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Call:
+                                    <a
+                                        href="tel:+18558079484"
+                                        class="font-bold md:text-lg lg:text-xl text-white hover:text-primary"
+                                    >
+                                        +1 855 - 807 9484
+                                    </a>
+                                </li>
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Email:
+                                    <a href="/cdn-cgi/l/email-protection#6b030e0707042b190e051f1a45080406" class="font-bold md:text-lg lg:text-xl text-primary hover:underline">
+                                        <span class="__cf_email__" data-cfemail="325a575e5e5d7240575c46431c515d5f">[email&#160;protected]</span>
+                                    </a>
+                                </li>
+                                <li class="mb-[5px] last:mb-0 flex items-center flex-wrap gap-[5px]">
+                                    Address:
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        class="font-semibold text-white hover:text-primary"
+                                    >
+                                        123 Business Ave, Los Angeles, CA 90045
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-[60px] md:pt-[80px] lg:pt-[100px] xl:pt-[120px]"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-[15px] md:gap-[25px] border-t border-[#292F31] py-[20px] md:py-[25px] lg:py-[30px]">
+                    <p class="text-white !mb-0">
+                        © RentQ. All Rights Reserved. Powered by <a href="https://envytheme.com/" class="text-primary font-semibold hover:underline" target="_blank">EnvyTheme</a>
+                    </p>
+                    <ul class="flex items-center gap-[15px] lg:gap-[20px] md:justify-end">
+                        <li>
+                            <a href="privacy-policy.html" class="text-white hover:text-primary">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <span class="block w-px h-[17px] bg-[#D9D9D9]/20"></span>
+                        </li>
+                        <li>
+                            <a href="terms-of-service.html" class="text-white hover:text-primary">
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Back To Top -->
+        <button
+            type="button"
+            id="backToTopBtn"
+        >
+            <i class="flaticon-up-arrow"></i>
+        </button>
+        <!-- End Back To Top -->
+
+        <!-- LTR/RTL Mode -->
+        <button
+            type="button"
+            id="ltrRtlToggle"
+        >
+            <i class="ri-translate"></i>
+        </button>
+        <!-- End LTR/RTL Mode -->
+
+        <!-- Links Of JS File -->
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/scrollCue.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>
